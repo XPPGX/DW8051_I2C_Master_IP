@@ -14,5 +14,5 @@ This project is made by Quartus Lite
     - Log texts
     <br> ![1](./文字結果.jpg)
     
-    - The whole wave graph
+    - The whole waveform graph
     <br> ![1](./波型圖.jpg)
