@@ -1,0 +1,137 @@
+A51 MACRO ASSEMBLER  TEST_IO                                                              02/28/2006 20:31:45 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN test_io.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE test_io.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     
+                       4             
+0000 758000            5                     MOV  P0,#00H
+0003 759000            6                     MOV  P1,#00H
+0006 75A000            7                     MOV  P2,#00H
+0009 75B000            8                     MOV  P3,#00H
+                       9                                             
+000C C280             10                     CLR  P0.0
+000E D280             11                     SETB P0.0
+                      12                     
+0010 C290             13                     CLR  P1.0
+0012 D290             14                     SETB P1.0
+                      15                     
+0014 C2A0             16                     CLR  P2.0
+0016 D2A0             17                     SETB P2.0
+                      18                     
+0018 C2B0             19                     CLR  P3.0
+001A D2B0             20                     SETB P3.0
+                      21                     
+001C C281             22                     CLR  P0.1
+001E D281             23                     SETB P0.1
+                      24                     
+0020 C291             25                     CLR  P1.1
+0022 D291             26                     SETB P1.1
+                      27                     
+0024 C2A1             28                     CLR  P2.1
+0026 D2A1             29                     SETB P2.1
+                      30                     
+0028 C2B1             31                     CLR  P3.1
+002A D2B1             32                     SETB P3.1
+                      33                     
+002C C282             34                     CLR  P0.2
+002E D282             35                     SETB P0.2
+                      36                     
+0030 C292             37                     CLR  P1.2
+0032 D292             38                     SETB P1.2
+                      39                     
+0034 C2A2             40                     CLR  P2.2
+0036 D2A2             41                     SETB P2.2
+                      42                     
+0038 C2B2             43                     CLR  P3.2
+003A D2B2             44                     SETB P3.2
+                      45             
+003C C283             46                     CLR  P0.3
+003E D283             47                     SETB P0.3
+                      48                     
+0040 C293             49                     CLR  P1.3
+0042 D293             50                     SETB P1.3
+                      51                     
+0044 C2A3             52                     CLR  P2.3
+0046 D2A3             53                     SETB P2.3
+                      54                     
+0048 C2B3             55                     CLR  P3.3
+004A D2B3             56                     SETB P3.3
+                      57                     
+004C C284             58                     CLR  P0.4
+A51 MACRO ASSEMBLER  TEST_IO                                                              02/28/2006 20:31:45 PAGE     2
+
+004E D284             59                     SETB P0.4
+                      60                     
+0050 C294             61                     CLR  P1.4
+0052 D294             62                     SETB P1.4
+                      63                     
+0054 C2A4             64                     CLR  P2.4
+0056 D2A4             65                     SETB P2.4
+                      66                     
+0058 C2B4             67                     CLR  P3.4
+005A D2B4             68                     SETB P3.4
+                      69                     
+005C C285             70                     CLR  P0.5
+005E D285             71                     SETB P0.5
+                      72                     
+0060 C295             73                     CLR  P1.5
+0062 D295             74                     SETB P1.5
+                      75                     
+0064 C2A5             76                     CLR  P2.5
+0066 D2A5             77                     SETB P2.5
+                      78                     
+0068 C2B5             79                     CLR  P3.5
+006A D2B5             80                     SETB P3.5
+                      81     
+006C C286             82                     CLR  P0.6
+006E D286             83                     SETB P0.6
+                      84                     
+0070 C296             85                     CLR  P1.6
+0072 D296             86                     SETB P1.6
+                      87                     
+0074 C2A6             88                     CLR  P2.6
+0076 D2A6             89                     SETB P2.6
+                      90                     
+0078 C2B6             91                     CLR  P3.6
+007A D2B6             92                     SETB P3.6
+                      93                     
+007C C287             94                     CLR  P0.7
+007E D287             95                     SETB P0.7
+                      96                     
+0080 C297             97                     CLR  P1.7
+0082 D297             98                     SETB P1.7
+                      99                     
+0084 C2A7            100                     CLR  P2.7
+0086 D2A7            101                     SETB P2.7
+                     102                     
+0088 C2B7            103                     CLR  P3.7
+008A D2B7            104                     SETB P3.7
+                     105                     END
+                             
+                             
+                             
+A51 MACRO ASSEMBLER  TEST_IO                                                              02/28/2006 20:31:45 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

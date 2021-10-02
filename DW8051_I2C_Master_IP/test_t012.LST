@@ -1,0 +1,193 @@
+A51 MACRO ASSEMBLER  TEST_T012                                                            04/24/2006 16:44:47 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.07
+OBJECT MODULE PLACED IN test_t012.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE test_t012.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+  00C8                 3     sfr T2CON   = 0xC8;
+  00C9                 4     sfr T2MOD   = 0xC9;
+  00CA                 5     sfr RCAP2L  = 0xCA;
+  00CB                 6     sfr RCAP2H  = 0xCB;
+                       7     
+                       8     
+                       9     
+  00C8                10     sbit CP_RL2= 0xC8;      /* 0=Reload, 1=Capture select */
+  00C9                11     sbit C_T2 = 0xC9;       /* 0=Timer, 1=Counter */
+  00CA                12     sbit TR2  = 0xCA;       /* 0=Stop timer, 1=Start timer */
+  00CB                13     sbit EXEN2= 0xCB;       /* Timer 2 external enable */
+  00CC                14     sbit TCLK = 0xCC;       /* 0=Serial clock uses Timer 1 overflow, 1=Timer 2 */
+  00CD                15     sbit RCLK = 0xCD;       /* 0=Serial clock uses Timer 1 overflow, 1=Timer 2 */
+  00CE                16     sbit EXF2 = 0xCE;       /* Timer 2 external flag */
+  00CF                17     sbit TF2  = 0xCF;       /* Timer 2 overflow flag */
+                      18     
+                      19     
+                      20     
+                      21     
+----                  22                     CSEG AT 0000H
+0000 802E             23                     JMP     START
+----                  24                     CSEG AT 0003H
+0003 805F             25                     JMP     INT0_ISR
+----                  26                     CSEG AT 000BH
+000B 806D             27                     JMP     TIMER0_ISR
+----                  28                     CSEG AT 0013H
+0013 804F             29                     JMP     INT0_ISR
+----                  30                     CSEG AT 001BH
+001B 8072             31                     JMP     TIMER1_ISR
+----                  32                     CSEG AT 0023H
+0023 01B1             33                     JMP     UART_ISR
+----                  34                     CSEG AT 002BH
+002B 8077             35                     JMP     TIMER2_ISR
+                      36     
+----                  37                     CSEG AT 0030H   
+0030                  38     START:
+0030 759000           39                     MOV     P1,#00H
+                      40                     
+0033 758CC0           41                     MOV     TH0,#0C0H
+0036 758A00           42                     MOV     TL0,#00H
+                      43     
+0039 758D0F           44                     MOV     TH1,#0FH
+003C 758B00           45                     MOV     TL1,#00H
+                      46     
+003F 758911           47                     MOV     TMOD,#00010001B
+                      48                     
+0042 7598F0           49                     MOV     SCON,#0F0H
+0045 75CBFF           50                     MOV     RCAP2H,#0FFH
+0048 75CAD9           51                     MOV     RCAP2L,#0D9H
+004B 75C834           52                     MOV     T2CON,#34H
+                      53     
+004E 75A8BF           54                     MOV     IE,#10111111B
+                      55     
+0051 758355           56                     MOV     DPH,#55H
+0054 7582AA           57                     MOV     DPL,#0AAH
+                      58                     
+A51 MACRO ASSEMBLER  TEST_T012                                                            04/24/2006 16:44:47 PAGE     2
+
+                      59     
+0057                  60     LOOP:
+0057 00               61                     NOP
+0058 00               62                     NOP             
+0059 745A             63                     MOV     A,#5AH
+005B F0               64                     MOVX    @DPTR,A
+005C E500             65                     MOV     A,00H
+005E E0               66                     MOVX    A,@DPTR
+005F 00               67                     NOP
+0060 00               68                     NOP
+0061 020057           69                     LJMP    LOOP
+                      70             
+0064 C0E0             71     INT0_ISR:       PUSH    ACC
+0066 C0D0             72                     PUSH    PSW
+0068 B290             73                     CPL     P1.0
+006A D0D0             74                     POP     PSW
+006C D0E0             75                     POP     ACC
+006E 32               76                     RETI
+                      77     
+006F C0E0             78     INT1_ISR:       PUSH    ACC
+0071 C0D0             79                     PUSH    PSW
+0073 B291             80                     CPL     P1.1
+                      81     
+                      82                     
+                      83     
+0075 D0D0             84                     POP     PSW
+0077 D0E0             85                     POP     ACC
+0079 32               86                     RETI
+                      87     
+007A C0E0             88     TIMER0_ISR:     PUSH    ACC
+007C C0D0             89                     PUSH    PSW
+007E B292             90                     CPL     P1.2
+0080 C28D             91                     CLR     TF0
+                      92     
+0082 758CC0           93                     MOV     TH0,#0C0H
+0085 758A00           94                     MOV     TL0,#00H
+0088 D28C             95                     SETB    TR0
+                      96     
+008A D0D0             97                     POP     PSW
+008C D0E0             98                     POP     ACC
+008E 32               99                     RETI
+                     100     
+008F C0E0            101     TIMER1_ISR:     PUSH    ACC
+0091 C0D0            102                     PUSH    PSW
+0093 B293            103                     CPL     P1.3
+0095 C28F            104                     CLR     TF1
+0097 758D0F          105                     MOV     TH1,#0FH
+009A 758B00          106                     MOV     TL1,#00H
+009D D28E            107                     SETB    TR1
+009F D0D0            108                     POP     PSW
+00A1 D0E0            109                     POP     ACC
+00A3 32              110                     RETI
+                     111     
+00A4 C0E0            112     TIMER2_ISR:     PUSH    ACC
+00A6 C0D0            113                     PUSH    PSW
+00A8 B294            114                     CPL     P1.4
+00AA C2CF            115                     CLR     TF2
+00AC D0D0            116                     POP     PSW
+00AE D0E0            117                     POP     ACC
+00B0 32              118                     RETI
+                     119     
+00B1 C0E0            120     UART_ISR:       PUSH    ACC
+00B3 C0D0            121                     PUSH    PSW
+00B5 B295            122                     CPL     P1.5
+00B7 D0D0            123                     POP     PSW
+00B9 D0E0            124                     POP     ACC
+A51 MACRO ASSEMBLER  TEST_T012                                                            04/24/2006 16:44:47 PAGE     3
+
+00BB 32              125                     RETI
+                     126     
+                     127                     END
+                             
+                             
+                             
+A51 MACRO ASSEMBLER  TEST_T012                                                            04/24/2006 16:44:47 PAGE     4
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+CP_RL2 . . . . . .  B ADDR   00C8H.0 A   
+C_T2 . . . . . . .  B ADDR   00C8H.1 A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+EXEN2. . . . . . .  B ADDR   00C8H.3 A   
+EXF2 . . . . . . .  B ADDR   00C8H.6 A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+INT0_ISR . . . . .  C ADDR   0064H   A   
+INT1_ISR . . . . .  C ADDR   006FH   A   
+LOOP . . . . . . .  C ADDR   0057H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+RCAP2H . . . . . .  D ADDR   00CBH   A   
+RCAP2L . . . . . .  D ADDR   00CAH   A   
+RCLK . . . . . . .  B ADDR   00C8H.5 A   
+SCON . . . . . . .  D ADDR   0098H   A   
+START. . . . . . .  C ADDR   0030H   A   
+T2CON. . . . . . .  D ADDR   00C8H   A   
+T2MOD. . . . . . .  D ADDR   00C9H   A   
+TCLK . . . . . . .  B ADDR   00C8H.4 A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TF2. . . . . . . .  B ADDR   00C8H.7 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TIMER0_ISR . . . .  C ADDR   007AH   A   
+TIMER1_ISR . . . .  C ADDR   008FH   A   
+TIMER2_ISR . . . .  C ADDR   00A4H   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+TR2. . . . . . . .  B ADDR   00C8H.2 A   
+UART_ISR . . . . .  C ADDR   00B1H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,662 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vDW01_add
+Z0 !s110 1593090458
+!i10b 1
+!s100 BOnnH<IX8MT1eNLl9Jj>L1
+IDO`Wk4eoQ6g]E_Smac`Z>2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/qwerl/Desktop/B10702007_HW3
+Z3 w1113840000
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW01_add.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW01_add.v
+Z4 L0 31
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1593090458.000000
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/DW01_add.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW01_add.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@d@w01_add
+vDW01_addsub
+R0
+!i10b 1
+!s100 gnF^@OaeF_V0cN^Y34;Ra0
+IjDPhj:W@WPW=4el=JjJd`3
+R1
+R2
+R3
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW01_addsub.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW01_addsub.v
+L0 36
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/DW01_addsub.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW01_addsub.v|
+!i113 1
+R7
+R8
+n@d@w01_addsub
+vDW01_cmp2
+R0
+!i10b 1
+!s100 3dEWQNg3I4fbfBWk8HSko1
+IXGV2iLeI_H::kROfeeBGf1
+R1
+R2
+R3
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW01_cmp2.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW01_cmp2.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/DW01_cmp2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW01_cmp2.v|
+!i113 1
+R7
+R8
+n@d@w01_cmp2
+vDW01_sub
+R0
+!i10b 1
+!s100 jN0lBhaV19Z_nO6HeCflZ0
+I_d5MXdaO;7]WOgUFN>M`>1
+R1
+R2
+R3
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW01_sub.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW01_sub.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/DW01_sub.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW01_sub.v|
+!i113 1
+R7
+R8
+n@d@w01_sub
+vDW02_mult
+R0
+!i10b 1
+!s100 j3_Nh9ej:h:<@08kRT5`i0
+ImMnfDRKlbO9A@2OQ=8lkP1
+R1
+R2
+R3
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW02_mult.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW02_mult.v
+Z9 L0 33
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/DW02_mult.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW02_mult.v|
+!i113 1
+R7
+R8
+n@d@w02_mult
+vDW8051_alu
+Z10 !s110 1593090459
+!i10b 1
+!s100 T@amcF=S_jM=GPeTFl]Xc0
+I@:W5Z_:aPCPiaMcin;TH@3
+R1
+R2
+Z11 w1082044800
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_alu.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_alu.v
+L0 34
+R5
+r1
+!s85 0
+31
+R6
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_alu.v|
+!i113 1
+R7
+R8
+n@d@w8051_alu
+vDW8051_biu
+R10
+!i10b 1
+!s100 H?e[bTkB5;S;DZ4LUkf]h1
+I`nP5K72]fAK=XL`7EIJF93
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_biu.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_biu.v
+L0 39
+R5
+r1
+!s85 0
+31
+Z12 !s108 1593090459.000000
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_biu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_biu.v|
+!i113 1
+R7
+R8
+n@d@w8051_biu
+vDW8051_control
+R10
+!i10b 1
+!s100 :ejN`>adSGYNeLRLI6he72
+ITm036z]Bm_b5i@?HSPm@c3
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_control.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_control.v
+L0 73
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_control.v|
+!i113 1
+R7
+R8
+n@d@w8051_control
+vDW8051_core
+R10
+!i10b 1
+!s100 LNW4T68:c2WE20EmEEMLi2
+I4z<IJ=m_@8K?i`oc56mdh2
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_core.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_core.v
+L0 40
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_core.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_core.v|
+!i113 1
+R7
+R8
+n@d@w8051_core
+vDW8051_cpu
+R10
+!i10b 1
+!s100 E4OX2j6K<2J0LThhmLUhb2
+I<bg:lIzVS68BE607h2fCY3
+R1
+R2
+w1120110120
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_cpu.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_cpu.v
+Z13 L0 35
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_cpu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_cpu.v|
+!i113 1
+R7
+R8
+n@d@w8051_cpu
+vDW8051_intr_0
+R10
+!i10b 1
+!s100 NY48f]>N6`WXnGCjOeHYK3
+Ime3ChiCT;CGjh=NJ_eP_j0
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_0.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_0.v
+L0 38
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_0.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_0.v|
+!i113 1
+R7
+R8
+n@d@w8051_intr_0
+vDW8051_intr_1
+R10
+!i10b 1
+!s100 AcX9T>johTfhZlhFl]caT0
+I<VTlGVEaLl0`7[2:X]S^W0
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_1.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_1.v
+Z14 L0 42
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_1.v|
+!i113 1
+R7
+R8
+n@d@w8051_intr_1
+vDW8051_main_regs
+R10
+!i10b 1
+!s100 eY21mkcb?D;UJoBN?;Rko1
+IEUSaFkdNOo]STce[=Io601
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_main_regs.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_main_regs.v
+R4
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_main_regs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_main_regs.v|
+!i113 1
+R7
+R8
+n@d@w8051_main_regs
+vDW8051_op_decoder
+R10
+!i10b 1
+!s100 dPD675RVSg9MeJdJfQWg`3
+IoRIQLT4l6B5m[j4cc[2V:3
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_op_decoder.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_op_decoder.v
+L0 37
+R5
+r1
+!s85 0
+31
+R12
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_op_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_op_decoder.v|
+!i113 1
+R7
+R8
+n@d@w8051_op_decoder
+vDW8051_serial
+Z15 !s110 1593090460
+!i10b 1
+!s100 h]OJdRzhhD6TK5Kf]z:`01
+Il1HcQ_BMkkEcFmVF=m@DT1
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_serial.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_serial.v
+R9
+R5
+r1
+!s85 0
+31
+Z16 !s108 1593090460.000000
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_serial.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_serial.v|
+!i113 1
+R7
+R8
+n@d@w8051_serial
+vDW8051_shftreg
+R15
+!i10b 1
+!s100 FT<]^h:JKz6R5VZkDGM=M2
+IbJHR;P]PL:jf:lVWhc=WI0
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_shftreg.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_shftreg.v
+L0 41
+R5
+r1
+!s85 0
+31
+R16
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_shftreg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_shftreg.v|
+!i113 1
+R7
+R8
+n@d@w8051_shftreg
+vDW8051_timer
+R15
+!i10b 1
+!s100 dh6E6BG9_1NE42NB9bON^2
+IHGHVzDBdiGc2N1kDnzPfa1
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer.v
+R13
+R5
+r1
+!s85 0
+31
+R16
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer.v|
+!i113 1
+R7
+R8
+n@d@w8051_timer
+vDW8051_timer2
+R15
+!i10b 1
+!s100 `F2PK@:dkoiLVEYH[B0B_2
+IK7m9j2TnmR^SfXWH6OFUM1
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer2.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer2.v
+R9
+R5
+r1
+!s85 0
+31
+R16
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer2.v|
+!i113 1
+R7
+R8
+n@d@w8051_timer2
+vDW8051_timer_ctr
+R15
+!i10b 1
+!s100 396F7;`_iezm37bK]jzk10
+IcV702F4]Ija44glCbhhak3
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer_ctr.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer_ctr.v
+R13
+R5
+r1
+!s85 0
+31
+R16
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer_ctr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer_ctr.v|
+!i113 1
+R7
+R8
+n@d@w8051_timer_ctr
+vDW8051_u_ctr_clr
+R15
+!i10b 1
+!s100 =z5GiXjI`UNI7G;D<JC:21
+I6gK^mek47kR<j<aQ?c6fi2
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_u_ctr_clr.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_u_ctr_clr.v
+R13
+R5
+r1
+!s85 0
+31
+R16
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_u_ctr_clr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_u_ctr_clr.v|
+!i113 1
+R7
+R8
+n@d@w8051_u_ctr_clr
+vDW8051_updn_ctr
+R15
+!i10b 1
+!s100 FZl]ekDkN6Yh]ZQcW<V@?0
+I0[7>YQB;LHLUMl?[gdITK2
+R1
+R2
+R11
+8C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_updn_ctr.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/DW8051_updn_ctr.v
+R14
+R5
+r1
+!s85 0
+31
+R16
+!s107 ./DW8051/DW8051_parameter.v|./DW8051/DW8051_package.inc|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_updn_ctr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_updn_ctr.v|
+!i113 1
+R7
+R8
+n@d@w8051_updn_ctr
+vedge_detect
+R15
+!i10b 1
+!s100 8z0B<]cPa@LPgWBB0VRUn2
+IfBlWX7aVAQLCLNNKS<K372
+R1
+R2
+w1588312361
+8C:/Users/qwerl/Desktop/B10702007_HW3/edge_detect.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/edge_detect.v
+L0 2
+R5
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/edge_detect.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/edge_detect.v|
+!i113 1
+R7
+R8
+vext_mem
+R15
+!i10b 1
+!s100 e88DMj=Gbz8WQoDG2RCaj0
+IH8XKAh7zBz_Qam6lnc2SX0
+R1
+R2
+w1139493678
+8C:/Users/qwerl/Desktop/B10702007_HW3/ext_mem.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/ext_mem.v
+L0 1
+R5
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/ext_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/ext_mem.v|
+!i113 1
+R7
+R8
+vfaker
+R15
+!i10b 1
+!s100 A@<ac1e^?;:7`5<RnM=Aj0
+IiINX?dKLG6AfTGl`DzG?[2
+R1
+R2
+w1593089507
+8C:/Users/qwerl/Desktop/B10702007_HW3/faker.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/faker.v
+L0 2
+R5
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/faker.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/faker.v|
+!i113 1
+R7
+R8
+vhw3
+Z17 !s110 1593090461
+!i10b 1
+!s100 WSNo[127<G50PS3gJYD8P2
+Ik><7K=hcfUD<j:J98HmW=0
+R1
+R2
+w1592889121
+8C:/Users/qwerl/Desktop/B10702007_HW3/hw3.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/hw3.v
+L0 2
+R5
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/hw3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/hw3.v|
+!i113 1
+R7
+R8
+vint_mem
+R17
+!i10b 1
+!s100 IJ07_in53jG`gfbKb?1i<1
+I?ABfjMbTZA8CUWHLKP>R30
+R1
+R2
+w1586246670
+8C:/Users/qwerl/Desktop/B10702007_HW3/int_mem.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/int_mem.v
+L0 2
+R5
+r1
+!s85 0
+31
+Z18 !s108 1593090461.000000
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/int_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/int_mem.v|
+!i113 1
+R7
+R8
+vM24AA256
+R17
+!i10b 1
+!s100 HYa^aKC;zz]o]FDbi^<RQ1
+Ind@2U9h<Xo68V2PNSO4^41
+R1
+R2
+w1590585461
+8C:/Users/qwerl/Desktop/B10702007_HW3/M24AA256.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/M24AA256.v
+L0 81
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/M24AA256.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/M24AA256.v|
+!i113 1
+R7
+R8
+n@m24@a@a256
+vrom_mem
+R17
+!i10b 1
+!s100 2AQN=TYmNQR<fioDcf<=o1
+IHMeDEH=d?lHd^@n4zLUYl1
+R1
+R2
+w1592830161
+8C:/Users/qwerl/Desktop/B10702007_HW3/rom_mem.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/rom_mem.v
+L0 1
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/rom_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/rom_mem.v|
+!i113 1
+R7
+R8
+vsfr_mem
+R17
+!i10b 1
+!s100 ChH>1>cRJ0kRVF^7>BHB=2
+I@IzIR>64OYlIiXV8V6AT`2
+R1
+R2
+w1586247182
+8C:/Users/qwerl/Desktop/B10702007_HW3/sfr_mem.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/sfr_mem.v
+L0 2
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/sfr_mem.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/sfr_mem.v|
+!i113 1
+R7
+R8
+vtb_8051
+R0
+!i10b 1
+!s100 F8Ae[3QlED]5ITVSVGa9Z2
+I>VP2@e;P[GJLX]jn8nlh52
+R1
+R2
+w1593089530
+8C:/Users/qwerl/Desktop/B10702007_HW3/tb_8051.v
+FC:/Users/qwerl/Desktop/B10702007_HW3/tb_8051.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/qwerl/Desktop/B10702007_HW3/tb_8051.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/qwerl/Desktop/B10702007_HW3/tb_8051.v|
+!i113 1
+R7
+R8

@@ -1,0 +1,2593 @@
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.08a
+OBJECT MODULE PLACED IN testall.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE testall.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+                       3     
+                       4     
+                       5     
+                       6     
+                       7     
+                       8     
+                       9     
+                      10     
+                      11             
+                      12                     ;MOV  R0,#0xaa
+                      13                     ;MOV  R1,40h
+                      14                     ;MOV  40h,R0
+                      15                     ;MOV  40h,R1
+0000 7980             16                     MOV  R1,#128
+0002                  17             RAM_CLR_2:
+0002 19               18                     DEC  R1
+0003 7700             19                     MOV  @R1,#0
+0005 E9               20                     MOV  A,R1
+0006 70FA             21                     JNZ  RAM_CLR_2
+0008 75D000           22                     MOV  PSW,#0
+                      23     
+                      24     
+000B 740A             25                     MOV  A,#10
+000D 780A             26                     MOV  R0,#10
+000F 28               27                     ADD  A,R0
+0010 9414             28                     SUBB A,#20
+0012 6006             29                     JZ   DONE_2
+0014 759002           30                     MOV  P1,#2
+0017 020AC3           31                     LJMP FAILED
+001A                  32             DONE_2:
+                      33     
+                      34     
+                      35     
+                      36     
+                      37             
+001A 7880             38                     MOV  R0,#128
+001C                  39             RAM_CLR_3:
+001C 18               40                     DEC  R0
+001D 7600             41                     MOV  @R0,#0
+001F E8               42                     MOV  A,R0
+0020 70FA             43                     JNZ  RAM_CLR_3
+0022 75D000           44                     MOV  PSW,#0
+                      45     
+                      46     
+0025 740A             47                     MOV  A,#10
+0027 75640A           48                     MOV  100,#10
+002A 2564             49                     ADD  A,100
+002C 9414             50                     SUBB A,#20
+002E 6006             51                     JZ   DONE_3
+0030 759003           52                     MOV  P1,#3
+0033 020AC3           53                     LJMP FAILED
+0036                  54             DONE_3:
+                      55     
+                      56     
+                      57     
+                      58     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     2
+
+                      59             
+0036 7880             60                     MOV  R0,#128
+0038                  61             RAM_CLR_4:
+0038 18               62                     DEC  R0
+0039 7600             63                     MOV  @R0,#0
+003B E8               64                     MOV  A,R0
+003C 70FA             65                     JNZ  RAM_CLR_4
+003E 75D000           66                     MOV  PSW,#0
+                      67     
+                      68     
+0041 740A             69                     MOV  A,#10
+0043 7864             70                     MOV  R0,#100
+0045 75640A           71                     MOV  100,#10
+0048 26               72                     ADD  A,@R0
+0049 9414             73                     SUBB A,#20
+004B 6006             74                     JZ   DONE_4
+004D 759004           75                     MOV  P1,#4
+0050 020AC3           76                     LJMP FAILED
+0053                  77             DONE_4:
+                      78     
+                      79     
+                      80     
+                      81     
+                      82             
+0053 7880             83                     MOV  R0,#128
+0055                  84             RAM_CLR_5:
+0055 18               85                     DEC  R0
+0056 7600             86                     MOV  @R0,#0
+0058 E8               87                     MOV  A,R0
+0059 70FA             88                     JNZ  RAM_CLR_5
+005B 75D000           89                     MOV  PSW,#0
+                      90     
+                      91     
+005E 740A             92                     MOV  A,#10
+0060 2405             93                     ADD  A,#5
+0062 940F             94                     SUBB A,#15
+0064 6006             95                     JZ   DONE_5
+0066 759005           96                     MOV  P1,#5
+0069 020AC3           97                     LJMP FAILED
+006C                  98             DONE_5:
+                      99     
+                     100     
+                     101     
+                     102             
+006C 7880            103                     MOV  R0,#128
+006E                 104             RAM_CLR_6:
+006E 18              105                     DEC  R0
+006F 7600            106                     MOV  @R0,#0
+0071 E8              107                     MOV  A,R0
+0072 70FA            108                     JNZ  RAM_CLR_6
+0074 75D000          109                     MOV  PSW,#0
+                     110     
+                     111     
+0077 740A            112                     MOV  A,#10
+0079 780A            113                     MOV  R0,#10
+007B B3              114                     CPL  C
+007C 38              115                     ADDC A,R0
+007D 9415            116                     SUBB A,#21
+007F 6006            117                     JZ   DONE_6
+0081 759006          118                     MOV  P1,#6
+0084 020AC3          119                     LJMP FAILED
+0087                 120             DONE_6:
+                     121     
+                     122     
+                     123     
+                     124     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     3
+
+                     125             
+0087 7880            126                     MOV  R0,#128
+0089                 127             RAM_CLR_7:
+0089 18              128                     DEC  R0
+008A 7600            129                     MOV  @R0,#0
+008C E8              130                     MOV  A,R0
+008D 70FA            131                     JNZ  RAM_CLR_7
+008F 75D000          132                     MOV  PSW,#0
+                     133     
+                     134     
+0092 740A            135                     MOV  A,#10
+0094 75640A          136                     MOV  100,#10
+0097 B3              137                     CPL  C
+0098 3564            138                     ADDC A,100
+009A 9415            139                     SUBB A,#21
+009C 6006            140                     JZ   DONE_7
+009E 759007          141                     MOV  P1,#7
+00A1 020AC3          142                     LJMP FAILED
+00A4                 143             DONE_7:
+                     144     
+                     145     
+                     146     
+                     147     
+                     148             
+00A4 7880            149                     MOV  R0,#128
+00A6                 150             RAM_CLR_8:
+00A6 18              151                     DEC  R0
+00A7 7600            152                     MOV  @R0,#0
+00A9 E8              153                     MOV  A,R0
+00AA 70FA            154                     JNZ  RAM_CLR_8
+00AC 75D000          155                     MOV  PSW,#0
+                     156     
+                     157     
+00AF 740A            158                     MOV  A,#10
+00B1 7864            159                     MOV  R0,#100
+00B3 75640A          160                     MOV  100,#10
+00B6 B3              161                     CPL  C
+00B7 36              162                     ADDC A,@R0
+00B8 9415            163                     SUBB A,#21
+00BA 6006            164                     JZ   DONE_8
+00BC 759008          165                     MOV  P1,#8
+00BF 020AC3          166                     LJMP FAILED
+00C2                 167             DONE_8:
+                     168     
+                     169     
+                     170     
+                     171     
+                     172             
+00C2 7880            173                     MOV  R0,#128
+00C4                 174             RAM_CLR_9:
+00C4 18              175                     DEC  R0
+00C5 7600            176                     MOV  @R0,#0
+00C7 E8              177                     MOV  A,R0
+00C8 70FA            178                     JNZ  RAM_CLR_9
+00CA 75D000          179                     MOV  PSW,#0
+                     180     
+                     181     
+00CD 740A            182                     MOV  A,#10
+00CF B3              183                     CPL  C
+00D0 3405            184                     ADDC A,#5
+00D2 9410            185                     SUBB A,#16
+00D4 6006            186                     JZ   DONE_9
+00D6 759009          187                     MOV  P1,#9
+00D9 020AC3          188                     LJMP FAILED
+00DC                 189             DONE_9:
+                     190     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     4
+
+                     191     
+                     192     
+                     193             
+00DC 7880            194                     MOV  R0,#128
+00DE                 195             RAM_CLR_10:
+00DE 18              196                     DEC  R0
+00DF 7600            197                     MOV  @R0,#0
+00E1 E8              198                     MOV  A,R0
+00E2 70FA            199                     JNZ  RAM_CLR_10
+00E4 75D000          200                     MOV  PSW,#0
+                     201     
+                     202     
+00E7 01EF            203                     AJMP DONE_10
+00E9 75900A          204                     MOV  P1,#10
+00EC 020AC3          205                     LJMP FAILED
+00EF                 206             DONE_10:
+                     207     
+                     208     
+                     209     
+                     210             
+00EF 7880            211                     MOV  R0,#128
+00F1                 212             RAM_CLR_11:
+00F1 18              213                     DEC  R0
+00F2 7600            214                     MOV  @R0,#0
+00F4 E8              215                     MOV  A,R0
+00F5 70FA            216                     JNZ  RAM_CLR_11
+00F7 75D000          217                     MOV  PSW,#0
+                     218     
+                     219     
+00FA 78FF            220                     MOV  R0,#255
+00FC 74AA            221                     MOV  A,#170
+00FE 58              222                     ANL  A,R0
+00FF 94AA            223                     SUBB A,#170
+0101 6006            224                     JZ   DONE_11
+0103 75900B          225                     MOV  P1,#11
+0106 020AC3          226                     LJMP FAILED
+0109                 227             DONE_11:
+                     228     
+                     229     
+                     230     
+                     231             
+0109 7880            232                     MOV  R0,#128
+010B                 233             RAM_CLR_12:
+010B 18              234                     DEC  R0
+010C 7600            235                     MOV  @R0,#0
+010E E8              236                     MOV  A,R0
+010F 70FA            237                     JNZ  RAM_CLR_12
+0111 75D000          238                     MOV  PSW,#0
+                     239     
+                     240     
+0114 757F00          241                     MOV  127,#0
+0117 74FF            242                     MOV  A,#255
+0119 557F            243                     ANL  A,127
+011B 6006            244                     JZ   DONE_12
+011D 75900C          245                     MOV  P1,#12
+0120 020AC3          246                     LJMP FAILED
+0123                 247             DONE_12:
+                     248     
+                     249     
+                     250     
+                     251             
+0123 7880            252                     MOV  R0,#128
+0125                 253             RAM_CLR_13:
+0125 18              254                     DEC  R0
+0126 7600            255                     MOV  @R0,#0
+0128 E8              256                     MOV  A,R0
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     5
+
+0129 70FA            257                     JNZ  RAM_CLR_13
+012B 75D000          258                     MOV  PSW,#0
+                     259     
+                     260     
+012E 787F            261                     MOV  R0,#127
+0130 757F01          262                     MOV  127,#1
+0133 74FE            263                     MOV  A,#254
+0135 56              264                     ANL  A,@R0
+0136 6006            265                     JZ   DONE_13
+0138 75900D          266                     MOV  P1,#13
+013B 020AC3          267                     LJMP FAILED
+013E                 268             DONE_13:
+                     269     
+                     270     
+                     271     
+                     272             
+013E 7880            273                     MOV  R0,#128
+0140                 274             RAM_CLR_14:
+0140 18              275                     DEC  R0
+0141 7600            276                     MOV  @R0,#0
+0143 E8              277                     MOV  A,R0
+0144 70FA            278                     JNZ  RAM_CLR_14
+0146 75D000          279                     MOV  PSW,#0
+                     280     
+                     281     
+0149 74FF            282                     MOV  A,#255
+014B 54FF            283                     ANL  A,#255
+014D 94FF            284                     SUBB A,#255
+014F 6006            285                     JZ   DONE_14
+0151 75900E          286                     MOV  P1,#14
+0154 020AC3          287                     LJMP FAILED
+0157                 288             DONE_14:
+                     289     
+                     290     
+                     291     
+                     292             
+0157 7880            293                     MOV  R0,#128
+0159                 294             RAM_CLR_15:
+0159 18              295                     DEC  R0
+015A 7600            296                     MOV  @R0,#0
+015C E8              297                     MOV  A,R0
+015D 70FA            298                     JNZ  RAM_CLR_15
+015F 75D000          299                     MOV  PSW,#0
+                     300     
+                     301     
+0162 7532FF          302                     MOV  50,#255
+0165 7400            303                     MOV  A,#0
+0167 5232            304                     ANL  50,A
+0169 E532            305                     MOV  A,50
+016B 6006            306                     JZ   DONE_15
+016D 75900F          307                     MOV  P1,#15
+0170 020AC3          308                     LJMP FAILED
+0173                 309             DONE_15:
+                     310     
+                     311     
+                     312     
+                     313             
+0173 7880            314                     MOV  R0,#128
+0175                 315             RAM_CLR_16:
+0175 18              316                     DEC  R0
+0176 7600            317                     MOV  @R0,#0
+0178 E8              318                     MOV  A,R0
+0179 70FA            319                     JNZ  RAM_CLR_16
+017B 75D000          320                     MOV  PSW,#0
+                     321     
+                     322     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     6
+
+017E 751980          323                     MOV  25,#128
+0181 5319FF          324                     ANL  25,#255
+0184 E519            325                     MOV  A,25
+0186 9480            326                     SUBB A,#128
+0188 6006            327                     JZ   DONE_16
+018A 759010          328                     MOV  P1,#16
+018D 020AC3          329                     LJMP FAILED
+0190                 330             DONE_16:
+                     331     
+                     332     
+                     333     
+                     334             
+0190 7880            335                     MOV  R0,#128
+0192                 336             RAM_CLR_17:
+0192 18              337                     DEC  R0
+0193 7600            338                     MOV  @R0,#0
+0195 E8              339                     MOV  A,R0
+0196 70FA            340                     JNZ  RAM_CLR_17
+0198 75D000          341                     MOV  PSW,#0
+                     342     
+                     343     
+019B 7480            344                     MOV  A,#128
+019D B3              345                     CPL  C
+019E 82E7            346                     ANL  C,ACC.7
+01A0 947F            347                     SUBB A,#127
+01A2 6006            348                     JZ   DONE_17
+01A4 759011          349                     MOV  P1,#17
+01A7 020AC3          350                     LJMP FAILED
+01AA                 351             DONE_17:
+                     352     
+                     353     
+                     354     
+                     355             
+01AA 7880            356                     MOV  R0,#128
+01AC                 357             RAM_CLR_18:
+01AC 18              358                     DEC  R0
+01AD 7600            359                     MOV  @R0,#0
+01AF E8              360                     MOV  A,R0
+01B0 70FA            361                     JNZ  RAM_CLR_18
+01B2 75D000          362                     MOV  PSW,#0
+                     363     
+                     364     
+01B5 7480            365                     MOV  A,#128
+01B7 B3              366                     CPL  C
+01B8 B0E7            367                     ANL  C,/ACC.7
+01BA 9480            368                     SUBB A,#128
+01BC 6006            369                     JZ   DONE_18
+01BE 759012          370                     MOV  P1,#18
+01C1 020AC3          371                     LJMP FAILED
+01C4                 372             DONE_18:
+                     373     
+                     374     
+                     375     
+                     376             
+01C4 7880            377                     MOV  R0,#128
+01C6                 378             RAM_CLR_19:
+01C6 18              379                     DEC  R0
+01C7 7600            380                     MOV  @R0,#0
+01C9 E8              381                     MOV  A,R0
+01CA 70FA            382                     JNZ  RAM_CLR_19
+01CC 75D000          383                     MOV  PSW,#0
+                     384     
+                     385     
+01CF 7480            386                     MOV  A,#128
+01D1 756480          387                     MOV  100,#128
+01D4 B56405          388                     CJNE A,100,ERROR_19
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     7
+
+01D7 747F            389                     MOV  A,#127
+01D9 B56406          390                     CJNE A,100,CHECK_C_19
+01DC                 391             ERROR_19:
+01DC 759013          392                     MOV  P1,#19
+01DF 020AC3          393                     LJMP FAILED
+01E2                 394             CHECK_C_19:             ;Checks that carry was set
+01E2 4006            395                     JC   DONE_19
+01E4 759013          396                     MOV  P1,#19
+01E7 020AC3          397                     LJMP FAILED
+01EA                 398             DONE_19:
+                     399     
+                     400                     
+                     401     
+                     402     
+                     403             
+01EA 7880            404                     MOV  R0,#128
+01EC                 405             RAM_CLR_20:
+01EC 18              406                     DEC  R0
+01ED 7600            407                     MOV  @R0,#0
+01EF E8              408                     MOV  A,R0
+01F0 70FA            409                     JNZ  RAM_CLR_20
+01F2 75D000          410                     MOV  PSW,#0
+                     411                     
+                     412     
+01F5 7480            413                     MOV  A,#128
+01F7 B48005          414                     CJNE A,#128,ERROR_20
+01FA 747F            415                     MOV  A,#127
+01FC B48006          416                     CJNE A,#128,CHECK_C_20
+01FF                 417             ERROR_20:
+01FF 759014          418                     MOV  P1,#20
+0202 020AC3          419                     LJMP FAILED
+0205                 420             CHECK_C_20:             ;Checks that carry was set
+0205 4006            421                     JC   DONE_20
+0207 759014          422                     MOV  P1,#20
+020A 020AC3          423                     LJMP FAILED
+020D                 424             DONE_20:
+                     425     
+                     426     
+                     427     
+                     428     
+                     429             
+020D 7880            430                     MOV  R0,#128
+020F                 431             RAM_CLR_21:
+020F 18              432                     DEC  R0
+0210 7600            433                     MOV  @R0,#0
+0212 E8              434                     MOV  A,R0
+0213 70FA            435                     JNZ  RAM_CLR_21
+0215 75D000          436                     MOV  PSW,#0
+                     437     
+                     438     
+0218 7980            439                     MOV  R1,#128
+021A B98005          440                     CJNE R1,#128,ERROR_21
+021D 797F            441                     MOV  R1,#127
+021F B98006          442                     CJNE R1,#128,CHECK_C_21
+0222                 443             ERROR_21:
+0222 759015          444                     MOV  P1,#21
+0225 020AC3          445                     LJMP FAILED
+0228                 446             CHECK_C_21:             ;Checks that carry was set
+0228 4006            447                     JC   DONE_21
+022A 759015          448                     MOV  P1,#21
+022D 020AC3          449                     LJMP FAILED
+0230                 450             DONE_21:
+                     451     
+                     452     
+                     453     
+                     454             
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     8
+
+0230 7880            455                     MOV  R0,#128
+0232                 456             RAM_CLR_22:
+0232 18              457                     DEC  R0
+0233 7600            458                     MOV  @R0,#0
+0235 E8              459                     MOV  A,R0
+0236 70FA            460                     JNZ  RAM_CLR_22
+0238 75D000          461                     MOV  PSW,#0
+                     462     
+                     463     
+023B 7964            464                     MOV  R1,#100
+023D 756480          465                     MOV  100,#128
+0240 B78006          466                     CJNE @R1,#128,ERROR_22
+0243 75647F          467                     MOV  100,#127
+0246 B78006          468                     CJNE @R1,#128,CHECK_C_22
+0249                 469             ERROR_22:
+0249 759016          470                     MOV  P1,#22
+024C 020AC3          471                     LJMP FAILED
+024F                 472             CHECK_C_22:             ;Checks that carry was set
+024F 4006            473                     JC   DONE_22
+0251 759016          474                     MOV  P1,#22
+0254 020AC3          475                     LJMP FAILED
+0257                 476             DONE_22:
+                     477     
+                     478     
+                     479     
+                     480     
+                     481             
+0257 7880            482                     MOV  R0,#128
+0259                 483             RAM_CLR_23:
+0259 18              484                     DEC  R0
+025A 7600            485                     MOV  @R0,#0
+025C E8              486                     MOV  A,R0
+025D 70FA            487                     JNZ  RAM_CLR_23
+025F 75D000          488                     MOV  PSW,#0
+                     489     
+                     490     
+0262 7480            491                     MOV  A,#128
+0264 E4              492                     CLR  A
+0265 6006            493                     JZ   DONE_23
+0267 759017          494                     MOV  P1,#23
+026A 020AC3          495                     LJMP FAILED
+026D                 496             DONE_23:
+                     497     
+                     498     
+                     499     
+                     500     
+                     501             
+026D 7880            502                     MOV  R0,#128
+026F                 503             RAM_CLR_24:
+026F 18              504                     DEC  R0
+0270 7600            505                     MOV  @R0,#0
+0272 E8              506                     MOV  A,R0
+0273 70FA            507                     JNZ  RAM_CLR_24
+0275 75D000          508                     MOV  PSW,#0
+                     509     
+                     510     
+0278 B3              511                     CPL  C
+0279 C3              512                     CLR  C
+027A 5006            513                     JNC   DONE_24
+027C 759018          514                     MOV  P1,#24
+027F 020AC3          515                     LJMP FAILED
+0282                 516             DONE_24:
+                     517     
+                     518     
+                     519     
+                     520             
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE     9
+
+0282 7880            521                     MOV  R0,#128
+0284                 522             RAM_CLR_25:
+0284 18              523                     DEC  R0
+0285 7600            524                     MOV  @R0,#0
+0287 E8              525                     MOV  A,R0
+0288 70FA            526                     JNZ  RAM_CLR_25
+028A 75D000          527                     MOV  PSW,#0
+                     528     
+                     529     
+028D 7440            530                     MOV  A,#64
+028F C2E6            531                     CLR  ACC.6
+0291 6006            532                     JZ   DONE_25
+0293 759019          533                     MOV  P1,#25
+0296 020AC3          534                     LJMP FAILED
+0299                 535             DONE_25:
+                     536     
+                     537     
+                     538     
+                     539             
+0299 7880            540                     MOV  R0,#128
+029B                 541             RAM_CLR_26:
+029B 18              542                     DEC  R0
+029C 7600            543                     MOV  @R0,#0
+029E E8              544                     MOV  A,R0
+029F 70FA            545                     JNZ  RAM_CLR_26
+02A1 75D000          546                     MOV  PSW,#0
+                     547     
+                     548     
+02A4 74FF            549                     MOV  A,#255
+02A6 F4              550                     CPL  A
+02A7 6006            551                     JZ   DONE_26
+02A9 75901A          552                     MOV  P1,#26
+02AC 020AC3          553                     LJMP FAILED
+02AF                 554             DONE_26:
+                     555     
+                     556     
+                     557     
+                     558     
+                     559             
+02AF 7880            560                     MOV  R0,#128
+02B1                 561             RAM_CLR_27:
+02B1 18              562                     DEC  R0
+02B2 7600            563                     MOV  @R0,#0
+02B4 E8              564                     MOV  A,R0
+02B5 70FA            565                     JNZ  RAM_CLR_27
+02B7 75D000          566                     MOV  PSW,#0
+                     567     
+                     568     
+02BA B3              569                     CPL  C
+02BB 4006            570                     JC   DONE_27
+02BD 75901B          571                     MOV  P1,#27
+02C0 020AC3          572                     LJMP FAILED
+02C3                 573             DONE_27:
+                     574     
+                     575     
+                     576     
+                     577     
+                     578             
+02C3 7880            579                     MOV  R0,#128
+02C5                 580             RAM_CLR_28:
+02C5 18              581                     DEC  R0
+02C6 7600            582                     MOV  @R0,#0
+02C8 E8              583                     MOV  A,R0
+02C9 70FA            584                     JNZ  RAM_CLR_28
+02CB 75D000          585                     MOV  PSW,#0
+                     586     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    10
+
+                     587     
+02CE 7420            588                     MOV  A,#32
+02D0 B2E5            589                     CPL  ACC.5
+02D2 6006            590                     JZ   DONE_28
+02D4 75901C          591                     MOV  P1,#28
+02D7 020AC3          592                     LJMP FAILED
+02DA                 593             DONE_28:
+                     594     
+                     595     
+                     596     
+                     597     
+                     598             
+02DA 7880            599                     MOV  R0,#128
+02DC                 600             RAM_CLR_29:
+02DC 18              601                     DEC  R0
+02DD 7600            602                     MOV  @R0,#0
+02DF E8              603                     MOV  A,R0
+02E0 70FA            604                     JNZ  RAM_CLR_29
+02E2 75D000          605                     MOV  PSW,#0
+                     606     
+                     607     
+02E5 7480            608                     MOV  A,#80H
+02E7 2499            609                     ADD  A,#99H
+02E9 D4              610                     DA   A
+02EA 9478            611                     SUBB A,#78H     ;Will clr ACC if C set
+02EC 6006            612                     JZ   DONE_29
+02EE 75901D          613                     MOV  P1,#29
+02F1 020AC3          614                     LJMP FAILED             
+02F4                 615             DONE_29:
+                     616     
+                     617     
+                     618     
+                     619     
+                     620             
+02F4 7880            621                     MOV  R0,#128
+02F6                 622             RAM_CLR_30:
+02F6 18              623                     DEC  R0
+02F7 7600            624                     MOV  @R0,#0
+02F9 E8              625                     MOV  A,R0
+02FA 70FA            626                     JNZ  RAM_CLR_30
+02FC 75D000          627                     MOV  PSW,#0
+                     628     
+                     629     
+02FF 740A            630                     MOV  A,#10
+0301 14              631                     DEC  A
+0302 9409            632                     SUBB A,#9
+0304 6006            633                     JZ   DONE_30
+0306 75901E          634                     MOV  P1,#30
+0309 020AC3          635                     LJMP FAILED
+030C                 636             DONE_30:  
+                     637     
+                     638     
+                     639     
+                     640             
+030C 7880            641                     MOV  R0,#128
+030E                 642             RAM_CLR_31:
+030E 18              643                     DEC  R0
+030F 7600            644                     MOV  @R0,#0
+0311 E8              645                     MOV  A,R0
+0312 70FA            646                     JNZ  RAM_CLR_31
+0314 75D000          647                     MOV  PSW,#0
+                     648     
+                     649     
+0317 780A            650                     MOV  R0,#10
+0319 18              651                     DEC  R0
+031A E8              652                     MOV  A,R0
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    11
+
+031B 9409            653                     SUBB A,#9
+031D 6006            654                     JZ   DONE_31
+031F 75901F          655                     MOV  P1,#31
+0322 020AC3          656                     LJMP FAILED
+0325                 657             DONE_31:  
+                     658     
+                     659     
+                     660     
+                     661             
+0325 7880            662                     MOV  R0,#128
+0327                 663             RAM_CLR_32:
+0327 18              664                     DEC  R0
+0328 7600            665                     MOV  @R0,#0
+032A E8              666                     MOV  A,R0
+032B 70FA            667                     JNZ  RAM_CLR_32
+032D 75D000          668                     MOV  PSW,#0
+                     669     
+                     670     
+0330 757F0A          671                     MOV  127,#10
+0333 157F            672                     DEC  127
+0335 E57F            673                     MOV  A,127
+0337 9409            674                     SUBB A,#9
+0339 6006            675                     JZ   DONE_32
+033B 759020          676                     MOV  P1,#32
+033E 020AC3          677                     LJMP FAILED
+0341                 678             DONE_32:
+                     679       
+                     680     
+                     681     
+                     682             
+0341 7880            683                     MOV  R0,#128
+0343                 684             RAM_CLR_33:
+0343 18              685                     DEC  R0
+0344 7600            686                     MOV  @R0,#0
+0346 E8              687                     MOV  A,R0
+0347 70FA            688                     JNZ  RAM_CLR_33
+0349 75D000          689                     MOV  PSW,#0
+                     690     
+                     691     
+034C 787F            692                     MOV  R0,#127
+034E 757F0A          693                     MOV  127,#10
+0351 16              694                     DEC  @R0
+0352 E6              695                     MOV  A,@R0
+0353 9409            696                     SUBB A,#9
+0355 6006            697                     JZ   DONE_33
+0357 759021          698                     MOV  P1,#33
+035A 020AC3          699                     LJMP FAILED
+035D                 700             DONE_33:  
+                     701     
+                     702     
+                     703     
+                     704     
+                     705             
+035D 7880            706                     MOV  R0,#128
+035F                 707             RAM_CLR_34:
+035F 18              708                     DEC  R0
+0360 7600            709                     MOV  @R0,#0
+0362 E8              710                     MOV  A,R0
+0363 70FA            711                     JNZ  RAM_CLR_34
+0365 75D000          712                     MOV  PSW,#0
+                     713     
+                     714     
+                     715     
+                     716     
+                     717     
+                     718     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    12
+
+                     719     
+                     720     
+                     721     
+                     722     
+                     723     
+                     724     
+                     725     
+                     726     
+                     727     
+                     728     
+                     729     
+                     730     
+                     731     
+                     732             
+0368 7880            733                     MOV  R0,#128
+036A                 734             RAM_CLR_35:
+036A 18              735                     DEC  R0
+036B 7600            736                     MOV  @R0,#0
+036D E8              737                     MOV  A,R0
+036E 70FA            738                     JNZ  RAM_CLR_35
+0370 75D000          739                     MOV  PSW,#0
+                     740                     
+                     741     
+0373 780A            742                     MOV  R0,#10
+0375 D806            743                     DJNZ R0,JUMP_35         ;Should jump
+0377 759023          744                     MOV  P1,#35
+037A 020AC3          745                     LJMP FAILED
+037D                 746             JUMP_35:
+037D 7801            747                     MOV  R0,#1
+037F D802            748                     DJNZ R0,NOT_JUMP_35     ;Should not jump
+0381 6189            749                     AJMP DONE_35
+0383                 750             NOT_JUMP_35:
+0383 759023          751                     MOV  P1,#35
+0386 020AC3          752                     LJMP FAILED
+0389                 753             DONE_35:  
+                     754     
+                     755     
+                     756     
+                     757             
+0389 7880            758                     MOV  R0,#128
+038B                 759             RAM_CLR_36:
+038B 18              760                     DEC  R0
+038C 7600            761                     MOV  @R0,#0
+038E E8              762                     MOV  A,R0
+038F 70FA            763                     JNZ  RAM_CLR_36
+0391 75D000          764                     MOV  PSW,#0
+                     765     
+                     766     
+0394 757F0A          767                     MOV  127,#10
+0397 D57F06          768                     DJNZ 127,JUMP_36        ;Should jump
+039A 759024          769                     MOV  P1,#36
+039D 020AC3          770                     LJMP FAILED
+03A0                 771             JUMP_36:
+03A0 757F01          772                     MOV  127,#1
+03A3 D57F02          773                     DJNZ 127,NOT_JUMP_36    ;Should not jump
+03A6 61AE            774                     AJMP DONE_36
+03A8                 775             NOT_JUMP_36:
+03A8 759024          776                     MOV  P1,#36
+03AB 020AC3          777                     LJMP FAILED
+03AE                 778             DONE_36:  
+                     779     
+                     780     
+                     781             
+                     782             
+03AE 7880            783                     MOV  R0,#128
+03B0                 784             RAM_CLR_37:
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    13
+
+03B0 18              785                     DEC  R0
+03B1 7600            786                     MOV  @R0,#0
+03B3 E8              787                     MOV  A,R0
+03B4 70FA            788                     JNZ  RAM_CLR_37
+03B6 75D000          789                     MOV  PSW,#0
+                     790     
+                     791     
+03B9 740A            792                     MOV  A,#10
+03BB 04              793                     INC  A
+03BC 940B            794                     SUBB A,#11
+03BE 6006            795                     JZ   DONE_37
+03C0 759025          796                     MOV  P1,#37
+03C3 020AC3          797                     LJMP FAILED
+03C6                 798             DONE_37:  
+                     799     
+                     800     
+                     801             
+                     802             
+03C6 7880            803                     MOV  R0,#128
+03C8                 804             RAM_CLR_38:
+03C8 18              805                     DEC  R0
+03C9 7600            806                     MOV  @R0,#0
+03CB E8              807                     MOV  A,R0
+03CC 70FA            808                     JNZ  RAM_CLR_38
+03CE 75D000          809                     MOV  PSW,#0
+                     810     
+                     811     
+03D1 780A            812                     MOV  R0,#10
+03D3 08              813                     INC  R0
+03D4 E8              814                     MOV  A,R0
+03D5 940B            815                     SUBB A,#11
+03D7 6006            816                     JZ   DONE_38
+03D9 759026          817                     MOV  P1,#38
+03DC 020AC3          818                     LJMP FAILED
+03DF                 819             DONE_38:  
+                     820     
+                     821     
+                     822             
+                     823             
+03DF 7880            824                     MOV  R0,#128
+03E1                 825             RAM_CLR_39:
+03E1 18              826                     DEC  R0
+03E2 7600            827                     MOV  @R0,#0
+03E4 E8              828                     MOV  A,R0
+03E5 70FA            829                     JNZ  RAM_CLR_39
+03E7 75D000          830                     MOV  PSW,#0
+                     831     
+                     832     
+03EA 757F0A          833                     MOV  127,#10
+03ED 057F            834                     INC  127
+03EF E57F            835                     MOV  A,127
+03F1 940B            836                     SUBB A,#11
+03F3 6006            837                     JZ   DONE_39
+03F5 759027          838                     MOV  P1,#39
+03F8 020AC3          839                     LJMP FAILED
+03FB                 840             DONE_39:
+                     841     
+                     842     
+                     843             
+                     844             
+03FB 7880            845                     MOV  R0,#128
+03FD                 846             RAM_CLR_40:
+03FD 18              847                     DEC  R0
+03FE 7600            848                     MOV  @R0,#0
+0400 E8              849                     MOV  A,R0
+0401 70FA            850                     JNZ  RAM_CLR_40
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    14
+
+0403 75D000          851                     MOV  PSW,#0
+                     852     
+                     853     
+0406 757F0A          854                     MOV  127,#10
+0409 787F            855                     MOV  R0,#127
+040B 06              856                     INC  @R0
+040C E6              857                     MOV  A,@R0
+040D 940B            858                     SUBB A,#11
+040F 6006            859                     JZ   DONE_40
+0411 759028          860                     MOV  P1,#40
+0414 020AC3          861                     LJMP FAILED
+0417                 862             DONE_40:  
+                     863     
+                     864     
+                     865     
+                     866     
+                     867             
+0417 7880            868                     MOV  R0,#128
+0419                 869             RAM_CLR_41:
+0419 18              870                     DEC  R0
+041A 7600            871                     MOV  @R0,#0
+041C E8              872                     MOV  A,R0
+041D 70FA            873                     JNZ  RAM_CLR_41
+041F 75D000          874                     MOV  PSW,#0
+                     875     
+                     876     
+0422 9012FF          877                     MOV  DPTR,#12FFH
+0425 A3              878                     INC  DPTR
+0426 E583            879                     MOV  A,DPH
+0428 9413            880                     SUBB A,#13H
+042A 6006            881                     JZ   DPH_OK_41
+042C 759029          882                     MOV  P1,#41
+042F 020AC3          883                     LJMP FAILED
+0432                 884             DPH_OK_41:
+0432 E582            885                     MOV  A,DPL
+0434 6006            886                     JZ   DONE_41
+0436 759029          887                     MOV  P1,#41
+0439 020AC3          888                     LJMP FAILED
+043C                 889             DONE_41:  
+                     890     
+                     891     
+                     892     
+                     893             
+                     894             
+043C 7880            895                     MOV  R0,#128
+043E                 896             RAM_CLR_42:
+043E 18              897                     DEC  R0
+043F 7600            898                     MOV  @R0,#0
+0441 E8              899                     MOV  A,R0
+0442 70FA            900                     JNZ  RAM_CLR_42
+0444 75D000          901                     MOV  PSW,#0
+                     902     
+                     903     
+0447 7410            904                     MOV  A,#16
+0449 20E406          905                     JB   ACC.4,DONE_42
+044C 75902A          906                     MOV  P1,#42
+044F 020AC3          907                     LJMP FAILED
+0452                 908             DONE_42:
+                     909     
+                     910     
+                     911     
+                     912             
+                     913             
+0452 7880            914                     MOV  R0,#128
+0454                 915             RAM_CLR_43:
+0454 18              916                     DEC  R0
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    15
+
+0455 7600            917                     MOV  @R0,#0
+0457 E8              918                     MOV  A,R0
+0458 70FA            919                     JNZ  RAM_CLR_43
+045A 75D000          920                     MOV  PSW,#0
+                     921     
+                     922     
+045D 7408            923                     MOV  A,#8
+045F 10E306          924                     JBC  ACC.3,CHECK_BIT_43
+0462 75902B          925                     MOV  P1,#43
+0465 020AC3          926                     LJMP FAILED
+0468                 927             CHECK_BIT_43:
+0468 6006            928                     JZ   DONE_43
+046A 75902B          929                     MOV  P1,#43
+046D 020AC3          930                     LJMP FAILED
+0470                 931             DONE_43:
+                     932     
+                     933     
+                     934             
+                     935             
+0470 7880            936                     MOV  R0,#128
+0472                 937             RAM_CLR_44:
+0472 18              938                     DEC  R0
+0473 7600            939                     MOV  @R0,#0
+0475 E8              940                     MOV  A,R0
+0476 70FA            941                     JNZ  RAM_CLR_44
+0478 75D000          942                     MOV  PSW,#0
+                     943     
+                     944     
+047B 4003            945                     JC   ERROR_44
+047D B3              946                     CPL  C
+047E 4006            947                     JC   DONE_44
+0480                 948             ERROR_44:
+0480 75902C          949                     MOV  P1,#44
+0483 020AC3          950                     LJMP FAILED
+0486                 951             DONE_44:
+                     952     
+                     953     
+                     954             
+                     955             
+0486 7880            956                     MOV  R0,#128
+0488                 957             RAM_CLR_45:
+0488 18              958                     DEC  R0
+0489 7600            959                     MOV  @R0,#0
+048B E8              960                     MOV  A,R0
+048C 70FA            961                     JNZ  RAM_CLR_45
+048E 75D000          962                     MOV  PSW,#0
+                     963     
+                     964     
+0491 7404            965                     MOV  A,#4
+0493 900497          966                     MOV  DPTR,#JMP_TBL
+0496 73              967                     JMP  @A+DPTR
+0497                 968             JMP_TBL:
+0497 819F            969                     AJMP JUMP_0
+0499 819F            970                     AJMP JUMP_2
+049B 81A5            971                     AJMP JUMP_4
+049D 819F            972                     AJMP JUMP_6
+049F                 973             JUMP_0:
+049F                 974             JUMP_2:
+049F                 975             JUMP_6:
+049F 75902B          976                     MOV  P1,#43
+04A2 020AC3          977                     LJMP FAILED
+04A5                 978             JUMP_4:
+                     979     
+                     980     
+                     981             
+                     982             
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    16
+
+04A5 7880            983                     MOV  R0,#128
+04A7                 984             RAM_CLR_46:
+04A7 18              985                     DEC  R0
+04A8 7600            986                     MOV  @R0,#0
+04AA E8              987                     MOV  A,R0
+04AB 70FA            988                     JNZ  RAM_CLR_46
+04AD 75D000          989                     MOV  PSW,#0
+                     990     
+                     991     
+04B0 7404            992                     MOV  A,#4
+04B2 30E203          993                     JNB  ACC.2,ERROR_46
+04B5 30E106          994                     JNB  ACC.1,DONE_46
+04B8                 995             ERROR_46:
+04B8 75902E          996                     MOV  P1,#46
+04BB 020AC3          997                     LJMP FAILED
+04BE                 998             DONE_46:
+                     999     
+                    1000     
+                    1001             
+                    1002             
+04BE 7880           1003                     MOV  R0,#128
+04C0                1004             RAM_CLR_47:
+04C0 18             1005                     DEC  R0
+04C1 7600           1006                     MOV  @R0,#0
+04C3 E8             1007                     MOV  A,R0
+04C4 70FA           1008                     JNZ  RAM_CLR_47
+04C6 75D000         1009                     MOV  PSW,#0
+                    1010     
+                    1011     
+04C9 B3             1012                     CPL  C
+04CA 5003           1013                     JNC  ERROR_47
+04CC B3             1014                     CPL  C
+04CD 5006           1015                     JNC  DONE_47
+04CF                1016             ERROR_47:
+04CF 75902F         1017                     MOV  P1,#47
+04D2 020AC3         1018                     LJMP FAILED
+04D5                1019             DONE_47:
+                    1020     
+                    1021     
+                    1022             
+                    1023             
+04D5 7880           1024                     MOV  R0,#128
+04D7                1025             RAM_CLR_48:
+04D7 18             1026                     DEC  R0
+04D8 7600           1027                     MOV  @R0,#0
+04DA E8             1028                     MOV  A,R0
+04DB 70FA           1029                     JNZ  RAM_CLR_48
+04DD 75D000         1030                     MOV  PSW,#0
+                    1031     
+                    1032     
+04E0 7004           1033                     JNZ ERROR_48
+04E2 7401           1034                     MOV A,#1
+04E4 7006           1035                     JNZ DONE_48
+04E6                1036             ERROR_48:
+04E6 759030         1037                     MOV  P1,#48
+04E9 020AC3         1038                     LJMP FAILED
+04EC                1039             DONE_48:
+                    1040     
+                    1041     
+                    1042             
+                    1043             
+04EC 7880           1044                     MOV  R0,#128
+04EE                1045             RAM_CLR_49:
+04EE 18             1046                     DEC  R0
+04EF 7600           1047                     MOV  @R0,#0
+04F1 E8             1048                     MOV  A,R0
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    17
+
+04F2 70FA           1049                     JNZ  RAM_CLR_49
+04F4 75D000         1050                     MOV  PSW,#0
+                    1051     
+                    1052     
+04F7 7402           1053                     MOV  A,#2
+04F9 6004           1054                     JZ   ERROR_49
+04FB 7400           1055                     MOV  A,#0
+04FD 6006           1056                     JZ   DONE_49
+04FF                1057             ERROR_49:
+04FF 759031         1058                     MOV  P1,#49
+0502 020AC3         1059                     LJMP FAILED
+0505                1060             DONE_49:
+                    1061     
+                    1062     
+                    1063             
+                    1064             
+0505 7880           1065                     MOV  R0,#128
+0507                1066             RAM_CLR_51:
+0507 18             1067                     DEC  R0
+0508 7600           1068                     MOV  @R0,#0
+050A E8             1069                     MOV  A,R0
+050B 70FA           1070                     JNZ  RAM_CLR_51
+050D 75D000         1071                     MOV  PSW,#0
+                    1072     
+                    1073     
+0510 020519         1074                   LJMP DONE_51
+0513 759033         1075                     MOV  P1,#51
+0516 020AC3         1076                     LJMP FAILED
+0519                1077             DONE_51:
+                    1078     
+                    1079     
+                    1080     
+                    1081             
+0519 7880           1082                     MOV  R0,#128
+051B                1083             RAM_CLR_52:
+051B 18             1084                     DEC  R0
+051C 7600           1085                     MOV  @R0,#0
+051E E8             1086                     MOV  A,R0
+051F 70FA           1087                     JNZ  RAM_CLR_52
+0521 75D000         1088                     MOV  PSW,#0
+                    1089     
+                    1090     
+0524 780A           1091                     MOV  R0,#10
+0526 E8             1092                     MOV  A,R0
+0527 940A           1093                     SUBB A,#10
+0529 6006           1094                     JZ   DONE_52
+052B 759034         1095                     MOV  P1,#52
+052E 020AC3         1096                     LJMP FAILED
+0531                1097             DONE_52:  
+                    1098     
+                    1099     
+                    1100     
+                    1101     
+                    1102             
+0531 7880           1103                     MOV  R0,#128
+0533                1104             RAM_CLR_53:
+0533 18             1105                     DEC  R0
+0534 7600           1106                     MOV  @R0,#0
+0536 E8             1107                     MOV  A,R0
+0537 70FA           1108                     JNZ  RAM_CLR_53
+0539 75D000         1109                     MOV  PSW,#0
+                    1110     
+                    1111     
+053C 757F0A         1112                     MOV  127,#10
+053F E57F           1113                     MOV  A,127
+0541 940A           1114                     SUBB A,#10
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    18
+
+0543 6006           1115                     JZ   DONE_53
+0545 759035         1116                     MOV  P1,#53
+0548 020AC3         1117                     LJMP FAILED
+054B                1118             DONE_53:  
+                    1119     
+                    1120     
+                    1121     
+                    1122             
+054B 7880           1123                     MOV  R0,#128
+054D                1124             RAM_CLR_54:
+054D 18             1125                     DEC  R0
+054E 7600           1126                     MOV  @R0,#0
+0550 E8             1127                     MOV  A,R0
+0551 70FA           1128                     JNZ  RAM_CLR_54
+0553 75D000         1129                     MOV  PSW,#0
+                    1130     
+                    1131     
+0556 787F           1132                     MOV  R0,#127
+0558 757F0A         1133                     MOV  127,#10
+055B E6             1134                     MOV  A,@R0
+055C 940A           1135                     SUBB A,#10
+055E 6006           1136                     JZ   DONE_54
+0560 759036         1137                     MOV  P1,#54
+0563 020AC3         1138                     LJMP FAILED
+0566                1139             DONE_54:  
+                    1140     
+                    1141     
+                    1142     
+                    1143     
+                    1144             
+0566 7880           1145                     MOV  R0,#128
+0568                1146             RAM_CLR_55:
+0568 18             1147                     DEC  R0
+0569 7600           1148                     MOV  @R0,#0
+056B E8             1149                     MOV  A,R0
+056C 70FA           1150                     JNZ  RAM_CLR_55
+056E 75D000         1151                     MOV  PSW,#0
+                    1152     
+                    1153     
+0571 740A           1154                     MOV  A,#10
+0573 940A           1155                     SUBB A,#10
+0575 6006           1156                     JZ   DONE_55
+0577 759037         1157                     MOV  P1,#55
+057A 020AC3         1158                     LJMP FAILED
+057D                1159             DONE_55:  
+                    1160     
+                    1161     
+                    1162     
+                    1163             
+057D 7880           1164                     MOV  R0,#128
+057F                1165             RAM_CLR_56:
+057F 18             1166                     DEC  R0
+0580 7600           1167                     MOV  @R0,#0
+0582 E8             1168                     MOV  A,R0
+0583 70FA           1169                     JNZ  RAM_CLR_56
+0585 75D000         1170                     MOV  PSW,#0
+                    1171     
+                    1172     
+0588 740A           1173                     MOV  A,#10
+058A F8             1174                     MOV  R0,A
+058B E4             1175                     CLR  A
+058C E8             1176                     MOV  A,R0
+058D 940A           1177                     SUBB A,#10
+058F 6006           1178                     JZ   DONE_56
+0591 759038         1179                     MOV  P1,#56
+0594 020AC3         1180                     LJMP FAILED
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    19
+
+0597                1181             DONE_56:  
+                    1182     
+                    1183     
+                    1184     
+                    1185             
+0597 7880           1186                     MOV  R0,#128
+0599                1187             RAM_CLR_57:
+0599 18             1188                     DEC  R0
+059A 7600           1189                     MOV  @R0,#0
+059C E8             1190                     MOV  A,R0
+059D 70FA           1191                     JNZ  RAM_CLR_57
+059F 75D000         1192                     MOV  PSW,#0
+                    1193     
+                    1194     
+05A2 757F0A         1195                     MOV  127,#10
+05A5 A87F           1196                     MOV  R0,127
+05A7 E8             1197                     MOV  A,R0
+05A8 940A           1198                     SUBB A,#10
+05AA 6006           1199                     JZ   DONE_57
+05AC 759039         1200                     MOV  P1,#57
+05AF 020AC3         1201                     LJMP FAILED
+05B2                1202             DONE_57:  
+                    1203     
+                    1204     
+                    1205     
+                    1206             
+05B2 7880           1207                     MOV  R0,#128
+05B4                1208             RAM_CLR_58:
+05B4 18             1209                     DEC  R0
+05B5 7600           1210                     MOV  @R0,#0
+05B7 E8             1211                     MOV  A,R0
+05B8 70FA           1212                     JNZ  RAM_CLR_58
+05BA 75D000         1213                     MOV  PSW,#0
+                    1214     
+                    1215     
+05BD 780A           1216                     MOV  R0,#10
+05BF E8             1217                     MOV  A,R0
+05C0 940A           1218                     SUBB A,#10
+05C2 6006           1219                     JZ   DONE_58
+05C4 75903A         1220                     MOV  P1,#58
+05C7 020AC3         1221                     LJMP FAILED
+05CA                1222             DONE_58:  
+                    1223     
+                    1224     
+                    1225     
+                    1226             
+05CA 7880           1227                     MOV  R0,#128
+05CC                1228             RAM_CLR_59:
+05CC 18             1229                     DEC  R0
+05CD 7600           1230                     MOV  @R0,#0
+05CF E8             1231                     MOV  A,R0
+05D0 70FA           1232                     JNZ  RAM_CLR_59
+05D2 75D000         1233                     MOV  PSW,#0
+                    1234     
+                    1235     
+05D5 740A           1236                     MOV  A,#10
+05D7 F57F           1237                     MOV  127,A
+05D9 E4             1238                     CLR  A
+05DA E57F           1239                     MOV  A,127
+05DC 940A           1240                     SUBB A,#10
+05DE 6006           1241                     JZ   DONE_59
+05E0 75903B         1242                     MOV  P1,#59
+05E3 020AC3         1243                     LJMP FAILED
+05E6                1244             DONE_59:  
+                    1245     
+                    1246     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    20
+
+                    1247     
+                    1248             
+05E6 7880           1249                     MOV  R0,#128
+05E8                1250             RAM_CLR_60:
+05E8 18             1251                     DEC  R0
+05E9 7600           1252                     MOV  @R0,#0
+05EB E8             1253                     MOV  A,R0
+05EC 70FA           1254                     JNZ  RAM_CLR_60
+05EE 75D000         1255                     MOV  PSW,#0
+                    1256     
+                    1257     
+05F1 780A           1258                     MOV  R0,#10
+05F3 887F           1259                     MOV  127,R0
+05F5 E57F           1260                     MOV  A,127
+05F7 940A           1261                     SUBB A,#10
+05F9 6006           1262                     JZ   DONE_60
+05FB 75903C         1263                     MOV  P1,#60
+05FE 020AC3         1264                     LJMP FAILED
+0601                1265             DONE_60:  
+                    1266     
+                    1267     
+                    1268     
+                    1269             
+0601 7880           1270                     MOV  R0,#128
+0603                1271             RAM_CLR_61:
+0603 18             1272                     DEC  R0
+0604 7600           1273                     MOV  @R0,#0
+0606 E8             1274                     MOV  A,R0
+0607 70FA           1275                     JNZ  RAM_CLR_61
+0609 75D000         1276                     MOV  PSW,#0
+                    1277     
+                    1278     
+060C 757F0A         1279                     MOV  127,#10
+060F 857F7E         1280                     MOV  126,127
+0612 E57E           1281                     MOV  A,126
+0614 940A           1282                     SUBB A,#10
+0616 6006           1283                     JZ   DONE_61
+0618 75903D         1284                     MOV  P1,#61
+061B 020AC3         1285                     LJMP FAILED
+061E                1286             DONE_61:  
+                    1287     
+                    1288     
+                    1289     
+                    1290             
+061E 7880           1291                     MOV  R0,#128
+0620                1292             RAM_CLR_62:
+0620 18             1293                     DEC  R0
+0621 7600           1294                     MOV  @R0,#0
+0623 E8             1295                     MOV  A,R0
+0624 70FA           1296                     JNZ  RAM_CLR_62
+0626 75D000         1297                     MOV  PSW,#0
+                    1298     
+                    1299     
+0629 757F0A         1300                     MOV  127,#10
+062C 787F           1301                     MOV  R0,#127
+062E 867E           1302                     MOV  126,@R0
+0630 E57E           1303                     MOV  A,126
+0632 940A           1304                     SUBB A,#10
+0634 6006           1305                     JZ   DONE_62
+0636 75903E         1306                     MOV  P1,#62
+0639 020AC3         1307                     LJMP FAILED
+063C                1308             DONE_62:  
+                    1309     
+                    1310     
+                    1311     
+                    1312             
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    21
+
+063C 7880           1313                     MOV  R0,#128
+063E                1314             RAM_CLR_63:
+063E 18             1315                     DEC  R0
+063F 7600           1316                     MOV  @R0,#0
+0641 E8             1317                     MOV  A,R0
+0642 70FA           1318                     JNZ  RAM_CLR_63
+0644 75D000         1319                     MOV  PSW,#0
+                    1320     
+                    1321     
+0647 757F0A         1322                     MOV  127,#10
+064A E57F           1323                     MOV  A,127
+064C 940A           1324                     SUBB A,#10
+064E 6006           1325                     JZ   DONE_63
+0650 75903F         1326                     MOV  P1,#63
+0653 020AC3         1327                     LJMP FAILED
+0656                1328             DONE_63:  
+                    1329     
+                    1330     
+                    1331     
+                    1332             
+0656 7880           1333                     MOV  R0,#128
+0658                1334             RAM_CLR_64:
+0658 18             1335                     DEC  R0
+0659 7600           1336                     MOV  @R0,#0
+065B E8             1337                     MOV  A,R0
+065C 70FA           1338                     JNZ  RAM_CLR_64
+065E 75D000         1339                     MOV  PSW,#0
+                    1340     
+                    1341     
+0661 740A           1342                     MOV  A,#10
+0663 787F           1343                     MOV  R0,#127
+0665 F6             1344                     MOV  @R0,A
+0666 E4             1345                     CLR  A
+0667 E57F           1346                     MOV  A,127
+0669 940A           1347                     SUBB A,#10
+066B 6006           1348                     JZ   DONE_64
+066D 759040         1349                     MOV  P1,#64
+0670 020AC3         1350                     LJMP FAILED
+0673                1351             DONE_64:  
+                    1352     
+                    1353     
+                    1354     
+                    1355             
+0673 7880           1356                     MOV  R0,#128
+0675                1357             RAM_CLR_65:
+0675 18             1358                     DEC  R0
+0676 7600           1359                     MOV  @R0,#0
+0678 E8             1360                     MOV  A,R0
+0679 70FA           1361                     JNZ  RAM_CLR_65
+067B 75D000         1362                     MOV  PSW,#0
+                    1363     
+                    1364     
+067E 757F0A         1365                     MOV  127,#10
+0681 787E           1366                     MOV  R0,#126
+0683 A67F           1367                     MOV  @R0,127
+0685 E57E           1368                     MOV  A,126
+0687 940A           1369                     SUBB A,#10
+0689 6006           1370                     JZ   DONE_65
+068B 759041         1371                     MOV  P1,#65
+068E 020AC3         1372                     LJMP FAILED
+0691                1373             DONE_65:  
+                    1374     
+                    1375     
+                    1376     
+                    1377             
+0691 7880           1378                     MOV  R0,#128
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    22
+
+0693                1379             RAM_CLR_66:
+0693 18             1380                     DEC  R0
+0694 7600           1381                     MOV  @R0,#0
+0696 E8             1382                     MOV  A,R0
+0697 70FA           1383                     JNZ  RAM_CLR_66
+0699 75D000         1384                     MOV  PSW,#0
+                    1385     
+                    1386     
+069C 787F           1387                     MOV  R0,#127
+069E 760A           1388                     MOV  @R0,#10
+06A0 E57F           1389                     MOV  A,127
+06A2 940A           1390                     SUBB A,#10
+06A4 6006           1391                     JZ   DONE_66
+06A6 759042         1392                     MOV  P1,#66
+06A9 020AC3         1393                     LJMP FAILED
+06AC                1394             DONE_66:  
+                    1395     
+                    1396     
+                    1397     
+                    1398             
+06AC 7880           1399                     MOV  R0,#128
+06AE                1400             RAM_CLR_67:
+06AE 18             1401                     DEC  R0
+06AF 7600           1402                     MOV  @R0,#0
+06B1 E8             1403                     MOV  A,R0
+06B2 70FA           1404                     JNZ  RAM_CLR_67
+06B4 75D000         1405                     MOV  PSW,#0
+                    1406     
+                    1407     
+06B7 7401           1408                     MOV  A,#1
+06B9 A2E0           1409                     MOV  C,ACC.0
+06BB 4006           1410                     JC   DONE_67
+06BD 759043         1411                     MOV  P1,#67
+06C0 020AC3         1412                     LJMP FAILED
+06C3                1413             DONE_67:  
+                    1414     
+                    1415     
+                    1416     
+                    1417             
+06C3 7880           1418                     MOV  R0,#128
+06C5                1419             RAM_CLR_68:
+06C5 18             1420                     DEC  R0
+06C6 7600           1421                     MOV  @R0,#0
+06C8 E8             1422                     MOV  A,R0
+06C9 70FA           1423                     JNZ  RAM_CLR_68
+06CB 75D000         1424                     MOV  PSW,#0
+                    1425     
+                    1426     
+06CE B3             1427                     CPL  C
+06CF 92E0           1428                     MOV  ACC.0,C
+06D1 B3             1429                     CPL  C
+06D2 9401           1430                     SUBB A,#1
+06D4 6006           1431                     JZ   DONE_68
+06D6 759044         1432                     MOV  P1,#68
+06D9 020AC3         1433                     LJMP FAILED
+06DC                1434             DONE_68:  
+                    1435     
+                    1436     
+                    1437     
+                    1438             
+06DC 7880           1439                     MOV  R0,#128
+06DE                1440             RAM_CLR_69:
+06DE 18             1441                     DEC  R0
+06DF 7600           1442                     MOV  @R0,#0
+06E1 E8             1443                     MOV  A,R0
+06E2 70FA           1444                     JNZ  RAM_CLR_69
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    23
+
+06E4 75D000         1445                     MOV  PSW,#0
+                    1446     
+                    1447     
+06E7 901234         1448                     MOV  DPTR,#1234H
+06EA E583           1449                     MOV  A,DPH
+06EC 9412           1450                     SUBB A,#12H
+06EE 7006           1451                     JNZ  ERROR_69
+06F0 E582           1452                     MOV  A,DPL
+06F2 9434           1453                     SUBB A,#34H
+06F4 6006           1454                     JZ   DONE_69
+06F6                1455             ERROR_69:
+06F6 759045         1456                     MOV  P1,#69
+06F9 020AC3         1457                     LJMP FAILED
+06FC                1458             DONE_69:
+                    1459     
+                    1460     
+                    1461     
+                    1462     
+                    1463             
+06FC 7880           1464                     MOV  R0,#128
+06FE                1465             RAM_CLR_70:
+06FE 18             1466                     DEC  R0
+06FF 7600           1467                     MOV  @R0,#0
+0701 E8             1468                     MOV  A,R0
+0702 70FA           1469                     JNZ  RAM_CLR_70
+0704 75D000         1470                     MOV  PSW,#0
+                    1471     
+                    1472     
+0707 900718         1473                     MOV  DPTR,#DB_TBL
+070A 93             1474                     MOVC A,@A+DPTR
+070B 9466           1475                     SUBB A,#66H
+070D 700B           1476                     JNZ  ERROR_70
+070F 7401           1477                     MOV  A,#1
+0711 93             1478                     MOVC A,@A+DPTR
+0712 9477           1479                     SUBB A,#77H
+0714 600A           1480                     JZ   DONE_70
+0716 7002           1481                     JNZ  ERROR_70
+0718                1482             DB_TBL:
+0718 66             1483                     DB   66H
+0719 77             1484                     DB   77H
+071A                1485             ERROR_70:       
+071A 759046         1486                     MOV  P1,#70
+071D 020AC3         1487                     LJMP FAILED
+0720                1488             DONE_70:
+                    1489     
+                    1490     
+                    1491     
+                    1492     
+                    1493             
+0720 7880           1494                     MOV  R0,#128
+0722                1495             RAM_CLR_71:
+0722 18             1496                     DEC  R0
+0723 7600           1497                     MOV  @R0,#0
+0725 E8             1498                     MOV  A,R0
+0726 70FA           1499                     JNZ  RAM_CLR_71
+0728 75D000         1500                     MOV  PSW,#0
+                    1501     
+                    1502     
+072B 740D           1503                     MOV  A,#13
+072D 83             1504                     MOVC A,@A+PC
+072E 9466           1505                     SUBB A,#66H
+0730 700B           1506                     JNZ  ERROR_71
+0732 7407           1507                     MOV  A,#7
+0734 83             1508                     MOVC A,@A+PC
+0735 9477           1509                     SUBB A,#77H
+0737 600A           1510                     JZ   DONE_71
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    24
+
+0739 7002           1511                     JNZ  ERROR_71
+073B 66             1512                     DB   66H
+073C 77             1513                     DB   77H
+073D                1514             ERROR_71:       
+073D 759047         1515                     MOV  P1,#71
+0740 020AC3         1516                     LJMP FAILED
+0743                1517             DONE_71:
+                    1518     
+                    1519     
+                    1520     
+                    1521     
+                    1522             
+0743 7880           1523                     MOV  R0,#128
+0745                1524             RAM_CLR_76:
+0745 18             1525                     DEC  R0
+0746 7600           1526                     MOV  @R0,#0
+0748 E8             1527                     MOV  A,R0
+0749 70FA           1528                     JNZ  RAM_CLR_76
+074B 75D000         1529                     MOV  PSW,#0
+                    1530     
+                    1531     
+                    1532     
+                    1533     
+                    1534     
+                    1535     
+                    1536     
+                    1537     
+                    1538     
+                    1539     
+                    1540     
+                    1541     
+                    1542     
+                    1543     
+                    1544     
+                    1545     
+                    1546     
+                    1547             
+074E 7880           1548                     MOV  R0,#128
+0750                1549             RAM_CLR_78:
+0750 18             1550                     DEC  R0
+0751 7600           1551                     MOV  @R0,#0
+0753 E8             1552                     MOV  A,R0
+0754 70FA           1553                     JNZ  RAM_CLR_78
+0756 75D000         1554                     MOV  PSW,#0
+                    1555     
+                    1556     
+0759 7490           1557                     MOV  A,#90H
+075B 7809           1558                     MOV  R0,#9H
+075D 48             1559                     ORL  A,R0
+075E 9499           1560                     SUBB A,#99H
+0760 6006           1561                     JZ   DONE_78
+0762 75904E         1562                     MOV  P1,#78
+0765 020AC3         1563                     LJMP FAILED
+0768                1564             DONE_78:
+                    1565     
+                    1566     
+                    1567     
+                    1568             
+0768 7880           1569                     MOV  R0,#128
+076A                1570             RAM_CLR_79:
+076A 18             1571                     DEC  R0
+076B 7600           1572                     MOV  @R0,#0
+076D E8             1573                     MOV  A,R0
+076E 70FA           1574                     JNZ  RAM_CLR_79
+0770 75D000         1575                     MOV  PSW,#0
+                    1576     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    25
+
+                    1577     
+0773 7409           1578                     MOV  A,#9H
+0775 757F90         1579                     MOV  127,#90H
+0778 457F           1580                     ORL  A,127
+077A 9499           1581                     SUBB A,#99H
+077C 6006           1582                     JZ   DONE_79
+077E 75904F         1583                     MOV  P1,#79
+0781 020AC3         1584                     LJMP FAILED
+0784                1585             DONE_79:
+                    1586     
+                    1587     
+                    1588     
+                    1589             
+0784 7880           1590                     MOV  R0,#128
+0786                1591             RAM_CLR_80:
+0786 18             1592                     DEC  R0
+0787 7600           1593                     MOV  @R0,#0
+0789 E8             1594                     MOV  A,R0
+078A 70FA           1595                     JNZ  RAM_CLR_80
+078C 75D000         1596                     MOV  PSW,#0
+                    1597     
+                    1598     
+078F 7490           1599                     MOV  A,#90H
+0791 787F           1600                     MOV  R0,#127
+0793 757F06         1601                     MOV  127,#06H
+0796 46             1602                     ORL  A,@R0
+0797 9496           1603                     SUBB A,#96H
+0799 6006           1604                     JZ   DONE_80
+079B 759050         1605                     MOV  P1,#80
+079E 020AC3         1606                     LJMP FAILED
+07A1                1607             DONE_80:
+                    1608     
+                    1609     
+                    1610     
+                    1611             
+07A1 7880           1612                     MOV  R0,#128
+07A3                1613             RAM_CLR_81:
+07A3 18             1614                     DEC  R0
+07A4 7600           1615                     MOV  @R0,#0
+07A6 E8             1616                     MOV  A,R0
+07A7 70FA           1617                     JNZ  RAM_CLR_81
+07A9 75D000         1618                     MOV  PSW,#0
+                    1619     
+                    1620     
+07AC 7411           1621                     MOV  A,#11H
+07AE 4422           1622                     ORL  A,#22H
+07B0 9433           1623                     SUBB A,#33H
+07B2 6006           1624                     JZ   DONE_81
+07B4 759051         1625                     MOV  P1,#81
+07B7 020AC3         1626                     LJMP FAILED
+07BA                1627             DONE_81:
+                    1628     
+                    1629     
+                    1630     
+                    1631             
+07BA 7880           1632                     MOV  R0,#128
+07BC                1633             RAM_CLR_82:
+07BC 18             1634                     DEC  R0
+07BD 7600           1635                     MOV  @R0,#0
+07BF E8             1636                     MOV  A,R0
+07C0 70FA           1637                     JNZ  RAM_CLR_82
+07C2 75D000         1638                     MOV  PSW,#0
+                    1639     
+                    1640     
+07C5 7490           1641                     MOV  A,#90H
+07C7 757F09         1642                     MOV  127,#9H
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    26
+
+07CA 427F           1643                     ORL  127,A
+07CC E4             1644                     CLR  A
+07CD E57F           1645                     MOV  A,127
+07CF 9499           1646                     SUBB A,#99H
+07D1 6006           1647                     JZ   DONE_82
+07D3 759052         1648                     MOV  P1,#82
+07D6 020AC3         1649                     LJMP FAILED
+07D9                1650             DONE_82:
+                    1651     
+                    1652     
+                    1653     
+                    1654             
+07D9 7880           1655                     MOV  R0,#128
+07DB                1656             RAM_CLR_83:
+07DB 18             1657                     DEC  R0
+07DC 7600           1658                     MOV  @R0,#0
+07DE E8             1659                     MOV  A,R0
+07DF 70FA           1660                     JNZ  RAM_CLR_83
+07E1 75D000         1661                     MOV  PSW,#0
+                    1662     
+                    1663     
+07E4 757F90         1664                     MOV  127,#90H
+07E7 437F09         1665                     ORL  127,#9H
+07EA E57F           1666                     MOV  A,127
+07EC 9499           1667                     SUBB A,#99H
+07EE 6006           1668                     JZ   DONE_83
+07F0 759053         1669                     MOV  P1,#83
+07F3 020AC3         1670                     LJMP FAILED
+07F6                1671             DONE_83:
+                    1672     
+                    1673     
+                    1674     
+                    1675             
+07F6 7880           1676                     MOV  R0,#128
+07F8                1677             RAM_CLR_84:
+07F8 18             1678                     DEC  R0
+07F9 7600           1679                     MOV  @R0,#0
+07FB E8             1680                     MOV  A,R0
+07FC 70FA           1681                     JNZ  RAM_CLR_84
+07FE 75D000         1682                     MOV  PSW,#0
+                    1683     
+                    1684     
+0801 72E0           1685                     ORL  C,ACC.0
+0803 400A           1686                     JC   ERROR_84
+0805 7401           1687                     MOV  A,#1
+0807 72E0           1688                     ORL  C,ACC.0
+0809 5004           1689                     JNC  ERROR_84
+080B 72E1           1690                     ORL  C,ACC.1
+080D 4006           1691                     JC   DONE_84
+080F                1692             ERROR_84:
+080F 759054         1693                     MOV  P1,#84
+0812 020AC3         1694                     LJMP FAILED
+0815                1695             DONE_84:
+                    1696     
+                    1697     
+                    1698     
+                    1699             
+0815 7880           1700                     MOV  R0,#128
+0817                1701             RAM_CLR_85:
+0817 18             1702                     DEC  R0
+0818 7600           1703                     MOV  @R0,#0
+081A E8             1704                     MOV  A,R0
+081B 70FA           1705                     JNZ  RAM_CLR_85
+081D 75D000         1706                     MOV  PSW,#0
+                    1707     
+                    1708     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    27
+
+0820 7401           1709                     MOV  A,#1
+0822 A0E0           1710                     ORL  C,/ACC.0
+0824 4008           1711                     JC   ERROR_85
+0826 A0E1           1712                     ORL  C,/ACC.1
+0828 5004           1713                     JNC  ERROR_85
+082A A0E0           1714                     ORL  C,/ACC.0
+082C 4006           1715                     JC   DONE_85
+082E                1716             ERROR_85:
+082E 759055         1717                     MOV  P1,#85
+0831 020AC3         1718                     LJMP FAILED
+0834                1719             DONE_85:
+                    1720     
+                    1721     
+                    1722     
+                    1723     
+                    1724             
+0834 7880           1725                     MOV  R0,#128
+0836                1726             RAM_CLR_87:
+0836 18             1727                     DEC  R0
+0837 7600           1728                     MOV  @R0,#0
+0839 E8             1729                     MOV  A,R0
+083A 70FA           1730                     JNZ  RAM_CLR_87
+083C 75D000         1731                     MOV  PSW,#0
+                    1732     
+                    1733     
+083F 900123         1734                     MOV  DPTR,#0123H
+0842 757F08         1735                     MOV  127,#8
+0845 C082           1736                     PUSH DPL
+0847 C083           1737                     PUSH DPH
+0849 C07F           1738                     PUSH 127
+084B E508           1739                     MOV  A,8
+084D 9423           1740                     SUBB A,#23H
+084F 700C           1741                     JNZ  ERROR_87
+0851 E509           1742                     MOV  A,9
+0853 9401           1743                     SUBB A,#1
+0855 7006           1744                     JNZ ERROR_87
+0857 E50A           1745                     MOV  A,10
+0859 9408           1746                     SUBB A,#8
+085B 6006           1747                     JZ   DONE_87
+085D                1748             ERROR_87:
+085D 759057         1749                     MOV  P1,#87
+0860 020AC3         1750                     LJMP FAILED
+0863                1751             DONE_87:
+                    1752     
+                    1753     
+0863 D081           1754                     POP  SP
+0865 D064           1755                     POP  100
+0867 E564           1756                     MOV  A,100
+0869 9423           1757                     SUBB A,#23H
+086B 6006           1758                     JZ   DONE_86
+086D 759056         1759                     MOV  P1,#86
+0870 020AC3         1760                     LJMP FAILED
+0873                1761             DONE_86:
+                    1762     
+                    1763     
+                    1764     
+                    1765             
+0873 7880           1766                     MOV  R0,#128
+0875                1767             RAM_CLR_90:
+0875 18             1768                     DEC  R0
+0876 7600           1769                     MOV  @R0,#0
+0878 E8             1770                     MOV  A,R0
+0879 70FA           1771                     JNZ  RAM_CLR_90
+087B 75D000         1772                     MOV  PSW,#0
+                    1773     
+                    1774     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    28
+
+087E 7481           1775                     MOV  A,#129
+0880 23             1776                     RL   A
+0881 9403           1777                     SUBB A,#3
+0883 6006           1778                     JZ   DONE_90
+0885 75905A         1779                     MOV  P1,#90
+0888 020AC3         1780                     LJMP FAILED
+088B                1781             DONE_90:
+                    1782     
+                    1783     
+                    1784     
+                    1785     
+                    1786             
+088B 7880           1787                     MOV  R0,#128
+088D                1788             RAM_CLR_91:
+088D 18             1789                     DEC  R0
+088E 7600           1790                     MOV  @R0,#0
+0890 E8             1791                     MOV  A,R0
+0891 70FA           1792                     JNZ  RAM_CLR_91
+0893 75D000         1793                     MOV  PSW,#0
+                    1794     
+                    1795     
+0896 7481           1796                     MOV  A,#129
+0898 33             1797                     RLC  A
+0899 9401           1798                     SUBB A,#1       ;A(2)-C(1)-1
+089B 6006           1799                     JZ   DONE_91
+089D 75905B         1800                     MOV  P1,#91
+08A0 020AC3         1801                     LJMP FAILED
+08A3                1802             DONE_91:
+                    1803     
+                    1804     
+                    1805     
+                    1806             
+08A3 7880           1807                     MOV  R0,#128
+08A5                1808             RAM_CLR_92:
+08A5 18             1809                     DEC  R0
+08A6 7600           1810                     MOV  @R0,#0
+08A8 E8             1811                     MOV  A,R0
+08A9 70FA           1812                     JNZ  RAM_CLR_92
+08AB 75D000         1813                     MOV  PSW,#0
+                    1814     
+                    1815     
+08AE 7481           1816                     MOV  A,#129
+08B0 03             1817                     RR   A
+08B1 94C0           1818                     SUBB A,#192
+08B3 6006           1819                     JZ   DONE_92
+08B5 75905C         1820                     MOV  P1,#92
+08B8 020AC3         1821                     LJMP FAILED
+08BB                1822             DONE_92:
+                    1823     
+                    1824     
+                    1825     
+                    1826     
+                    1827             
+08BB 7880           1828                     MOV  R0,#128
+08BD                1829             RAM_CLR_93:
+08BD 18             1830                     DEC  R0
+08BE 7600           1831                     MOV  @R0,#0
+08C0 E8             1832                     MOV  A,R0
+08C1 70FA           1833                     JNZ  RAM_CLR_93
+08C3 75D000         1834                     MOV  PSW,#0
+                    1835     
+                    1836     
+08C6 7403           1837                     MOV  A,#3
+08C8 13             1838                     RRC  A
+08C9 9400           1839                     SUBB A,#0       ;A(1)-C(1)-0
+08CB 6006           1840                     JZ   DONE_93
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    29
+
+08CD 75905D         1841                     MOV  P1,#93
+08D0 020AC3         1842                     LJMP FAILED
+08D3                1843             DONE_93:
+                    1844     
+                    1845     
+                    1846     
+                    1847             
+08D3 7880           1848                     MOV  R0,#128
+08D5                1849             RAM_CLR_94:
+08D5 18             1850                     DEC  R0
+08D6 7600           1851                     MOV  @R0,#0
+08D8 E8             1852                     MOV  A,R0
+08D9 70FA           1853                     JNZ  RAM_CLR_94
+08DB 75D000         1854                     MOV  PSW,#0
+                    1855     
+                    1856     
+08DE D3             1857                     SETB C
+08DF 7401           1858                     MOV  A,#1
+08E1 9400           1859                     SUBB A,#0       ;A(1)-C(1)-0
+08E3 6006           1860                     JZ   DONE_94
+08E5 75905E         1861                     MOV  P1,#94
+08E8 020AC3         1862                     LJMP FAILED
+08EB                1863             DONE_94:
+                    1864     
+                    1865     
+                    1866     
+                    1867             
+08EB 7880           1868                     MOV  R0,#128
+08ED                1869             RAM_CLR_95:
+08ED 18             1870                     DEC  R0
+08EE 7600           1871                     MOV  @R0,#0
+08F0 E8             1872                     MOV  A,R0
+08F1 70FA           1873                     JNZ  RAM_CLR_95
+08F3 75D000         1874                     MOV  PSW,#0
+                    1875     
+                    1876     
+08F6 D2E7           1877                     SETB ACC.7
+08F8 9480           1878                     SUBB A,#128
+08FA 6006           1879                     JZ   DONE_95
+08FC 75905F         1880                     MOV  P1,#95
+08FF 020AC3         1881                     LJMP FAILED
+0902                1882             DONE_95:
+                    1883     
+                    1884     
+                    1885     
+                    1886             
+0902 7880           1887                     MOV  R0,#128
+0904                1888             RAM_CLR_96:
+0904 18             1889                     DEC  R0
+0905 7600           1890                     MOV  @R0,#0
+0907 E8             1891                     MOV  A,R0
+0908 70FA           1892                     JNZ  RAM_CLR_96
+090A 75D000         1893                     MOV  PSW,#0
+                    1894     
+                    1895     
+090D 8006           1896                     SJMP DONE_96
+090F 759060         1897                     MOV  P1,#96
+0912 020AC3         1898                     LJMP FAILED
+0915                1899             DONE_96:
+                    1900     
+                    1901     
+                    1902     
+                    1903             
+0915 7880           1904                     MOV  R0,#128
+0917                1905             RAM_CLR_97:
+0917 18             1906                     DEC  R0
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    30
+
+0918 7600           1907                     MOV  @R0,#0
+091A E8             1908                     MOV  A,R0
+091B 70FA           1909                     JNZ  RAM_CLR_97
+091D 75D000         1910                     MOV  PSW,#0
+                    1911     
+                    1912     
+0920 740A           1913                     MOV  A,#10
+0922 780A           1914                     MOV  R0,#10
+0924 98             1915                     SUBB A,R0
+0925 6006           1916                     JZ   DONE_97
+0927 759061         1917                     MOV  P1,#97
+092A 020AC3         1918                     LJMP FAILED
+092D                1919             DONE_97:
+                    1920     
+                    1921     
+                    1922     
+                    1923             
+092D 7880           1924                     MOV  R0,#128
+092F                1925             RAM_CLR_98:
+092F 18             1926                     DEC  R0
+0930 7600           1927                     MOV  @R0,#0
+0932 E8             1928                     MOV  A,R0
+0933 70FA           1929                     JNZ  RAM_CLR_98
+0935 75D000         1930                     MOV  PSW,#0
+                    1931     
+                    1932     
+0938 740A           1933                     MOV  A,#10
+093A 757F0A         1934                     MOV  127,#10
+093D 957F           1935                     SUBB A,127
+093F 6006           1936                     JZ   DONE_98
+0941 759062         1937                     MOV  P1,#98
+0944 020AC3         1938                     LJMP FAILED
+0947                1939             DONE_98:  
+                    1940     
+                    1941     
+                    1942     
+                    1943             
+0947 7880           1944                     MOV  R0,#128
+0949                1945             RAM_CLR_99:
+0949 18             1946                     DEC  R0
+094A 7600           1947                     MOV  @R0,#0
+094C E8             1948                     MOV  A,R0
+094D 70FA           1949                     JNZ  RAM_CLR_99
+094F 75D000         1950                     MOV  PSW,#0
+                    1951     
+                    1952     
+0952 740A           1953                     MOV  A,#10
+0954 787F           1954                     MOV  R0,#127
+0956 757F0A         1955                     MOV  127,#10
+0959 96             1956                     SUBB A,@R0
+095A 6006           1957                     JZ   DONE_99
+095C 759063         1958                     MOV  P1,#99
+095F 020AC3         1959                     LJMP FAILED
+0962                1960             DONE_99:
+                    1961     
+                    1962     
+                    1963     
+                    1964     
+                    1965             
+0962 7880           1966                     MOV  R0,#128
+0964                1967             RAM_CLR_100:
+0964 18             1968                     DEC  R0
+0965 7600           1969                     MOV  @R0,#0
+0967 E8             1970                     MOV  A,R0
+0968 70FA           1971                     JNZ  RAM_CLR_100
+096A 75D000         1972                     MOV  PSW,#0
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    31
+
+                    1973     
+                    1974     
+096D 740A           1975                     MOV  A,#10
+096F 940A           1976                     SUBB A,#10
+0971 6006           1977                     JZ   DONE_100
+0973 759064         1978                     MOV  P1,#100
+0976 020AC3         1979                     LJMP FAILED
+0979                1980             DONE_100:  
+                    1981     
+                    1982     
+                    1983     
+                    1984             
+0979 7880           1985                     MOV  R0,#128
+097B                1986             RAM_CLR_101:
+097B 18             1987                     DEC  R0
+097C 7600           1988                     MOV  @R0,#0
+097E E8             1989                     MOV  A,R0
+097F 70FA           1990                     JNZ  RAM_CLR_101
+0981 75D000         1991                     MOV  PSW,#0
+                    1992     
+                    1993     
+0984 7423           1994                     MOV  A,#23H
+0986 C4             1995                     SWAP A
+0987 9432           1996                     SUBB A,#32H
+0989 6006           1997                     JZ   DONE_101
+098B 759065         1998                     MOV  P1,#101
+098E 020AC3         1999                     LJMP FAILED
+0991                2000             DONE_101:  
+                    2001     
+                    2002     
+                    2003     
+                    2004             
+0991 7880           2005                     MOV  R0,#128
+0993                2006             RAM_CLR_102:
+0993 18             2007                     DEC  R0
+0994 7600           2008                     MOV  @R0,#0
+0996 E8             2009                     MOV  A,R0
+0997 70FA           2010                     JNZ  RAM_CLR_102
+0999 75D000         2011                     MOV  PSW,#0
+                    2012     
+                    2013     
+099C 740A           2014                     MOV  A,#10
+099E 7863           2015                     MOV  R0,#99
+09A0 C8             2016                     XCH  A,R0
+09A1 9463           2017                     SUBB A,#99
+09A3 7005           2018                     JNZ  ERROR_102
+09A5 E8             2019                     MOV  A,R0
+09A6 940A           2020                     SUBB A,#10
+09A8 6006           2021                     JZ   DONE_102
+09AA                2022             ERROR_102:
+09AA 759066         2023                     MOV  P1,#102
+09AD 020AC3         2024                     LJMP FAILED
+09B0                2025             DONE_102:
+                    2026     
+                    2027     
+                    2028     
+                    2029             
+09B0 7880           2030                     MOV  R0,#128
+09B2                2031             RAM_CLR_103:
+09B2 18             2032                     DEC  R0
+09B3 7600           2033                     MOV  @R0,#0
+09B5 E8             2034                     MOV  A,R0
+09B6 70FA           2035                     JNZ  RAM_CLR_103
+09B8 75D000         2036                     MOV  PSW,#0
+                    2037     
+                    2038     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    32
+
+09BB 740A           2039                     MOV  A,#10
+09BD 757F63         2040                     MOV  127,#99
+09C0 C57F           2041                     XCH  A,127
+09C2 9463           2042                     SUBB A,#99
+09C4 7006           2043                     JNZ  ERROR_103
+09C6 E57F           2044                     MOV  A,127
+09C8 940A           2045                     SUBB A,#10
+09CA 6006           2046                     JZ   DONE_103
+09CC                2047             ERROR_103:
+09CC 759067         2048                     MOV  P1,#103
+09CF 020AC3         2049                     LJMP FAILED
+09D2                2050             DONE_103:  
+                    2051     
+                    2052     
+                    2053     
+                    2054             
+09D2 7880           2055                     MOV  R0,#128
+09D4                2056             RAM_CLR_104:
+09D4 18             2057                     DEC  R0
+09D5 7600           2058                     MOV  @R0,#0
+09D7 E8             2059                     MOV  A,R0
+09D8 70FA           2060                     JNZ  RAM_CLR_104
+09DA 75D000         2061                     MOV  PSW,#0
+                    2062     
+                    2063     
+09DD 740A           2064                     MOV  A,#10
+09DF 787F           2065                     MOV  R0,#127
+09E1 757F63         2066                     MOV  127,#99
+09E4 C6             2067                     XCH  A,@R0
+09E5 9463           2068                     SUBB A,#99
+09E7 7006           2069                     JNZ  ERROR_104
+09E9 E57F           2070                     MOV  A,127
+09EB 940A           2071                     SUBB A,#10
+09ED 6006           2072                     JZ   DONE_104
+09EF                2073             ERROR_104:
+09EF 759068         2074                     MOV  P1,#104
+09F2 020AC3         2075                     LJMP FAILED
+09F5                2076             DONE_104:
+                    2077     
+                    2078     
+                    2079     
+                    2080             
+09F5 7880           2081                     MOV  R0,#128
+09F7                2082             RAM_CLR_105:
+09F7 18             2083                     DEC  R0
+09F8 7600           2084                     MOV  @R0,#0
+09FA E8             2085                     MOV  A,R0
+09FB 70FA           2086                     JNZ  RAM_CLR_105
+09FD 75D000         2087                     MOV  PSW,#0
+                    2088     
+                    2089     
+0A00 7444           2090                     MOV  A,#44H
+0A02 787F           2091                     MOV  R0,#127
+0A04 757F55         2092                     MOV  127,#55H
+0A07 D6             2093                     XCHD A,@R0
+0A08 9445           2094                     SUBB A,#45H
+0A0A 7006           2095                     JNZ  ERROR_105
+0A0C E57F           2096                     MOV  A,127
+0A0E 9454           2097                     SUBB A,#54H
+0A10 6006           2098                     JZ   DONE_105
+0A12                2099             ERROR_105:
+0A12 759069         2100                     MOV  P1,#105
+0A15 020AC3         2101                     LJMP FAILED
+0A18                2102             DONE_105:
+                    2103     
+                    2104     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    33
+
+                    2105     
+                    2106     
+                    2107             
+0A18 7880           2108                     MOV  R0,#128
+0A1A                2109             RAM_CLR_106:
+0A1A 18             2110                     DEC  R0
+0A1B 7600           2111                     MOV  @R0,#0
+0A1D E8             2112                     MOV  A,R0
+0A1E 70FA           2113                     JNZ  RAM_CLR_106
+0A20 75D000         2114                     MOV  PSW,#0
+                    2115     
+                    2116     
+0A23 7435           2117                     MOV  A,#35H
+0A25 7853           2118                     MOV  R0,#53H
+0A27 68             2119                     XRL  A,R0
+0A28 9466           2120                     SUBB A,#66H
+0A2A 6006           2121                     JZ   DONE_106
+0A2C 75906A         2122                     MOV  P1,#106
+0A2F 020AC3         2123                     LJMP FAILED
+0A32                2124             DONE_106:
+                    2125     
+                    2126     
+                    2127     
+                    2128             
+0A32 7880           2129                     MOV  R0,#128
+0A34                2130             RAM_CLR_107:
+0A34 18             2131                     DEC  R0
+0A35 7600           2132                     MOV  @R0,#0
+0A37 E8             2133                     MOV  A,R0
+0A38 70FA           2134                     JNZ  RAM_CLR_107
+0A3A 75D000         2135                     MOV  PSW,#0
+                    2136     
+                    2137     
+0A3D 7453           2138                     MOV  A,#53H
+0A3F 757F35         2139                     MOV  127,#35H
+0A42 657F           2140                     XRL  A,127
+0A44 9466           2141                     SUBB A,#66H
+0A46 6006           2142                     JZ   DONE_107
+0A48 75906B         2143                     MOV  P1,#107
+0A4B 020AC3         2144                     LJMP FAILED
+0A4E                2145             DONE_107:
+                    2146     
+                    2147     
+                    2148     
+                    2149     
+                    2150             
+0A4E 7880           2151                     MOV  R0,#128
+0A50                2152             RAM_CLR_108:
+0A50 18             2153                     DEC  R0
+0A51 7600           2154                     MOV  @R0,#0
+0A53 E8             2155                     MOV  A,R0
+0A54 70FA           2156                     JNZ  RAM_CLR_108
+0A56 75D000         2157                     MOV  PSW,#0
+                    2158     
+                    2159     
+0A59 7435           2160                     MOV  A,#35H
+0A5B 787F           2161                     MOV  R0,#127
+0A5D 757F53         2162                     MOV  127,#53H
+0A60 66             2163                     XRL  A,@R0
+0A61 9466           2164                     SUBB A,#66H
+0A63 6006           2165                     JZ   DONE_108
+0A65 75906C         2166                     MOV  P1,#108
+0A68 020AC3         2167                     LJMP FAILED
+0A6B                2168             DONE_108:
+                    2169     
+                    2170     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    34
+
+                    2171     
+                    2172     
+                    2173             
+0A6B 7880           2174                     MOV  R0,#128
+0A6D                2175             RAM_CLR_109:
+0A6D 18             2176                     DEC  R0
+0A6E 7600           2177                     MOV  @R0,#0
+0A70 E8             2178                     MOV  A,R0
+0A71 70FA           2179                     JNZ  RAM_CLR_109
+0A73 75D000         2180                     MOV  PSW,#0
+                    2181     
+                    2182     
+0A76 7435           2183                     MOV  A,#35H
+0A78 6453           2184                     XRL  A,#53H
+0A7A 9466           2185                     SUBB A,#66H
+0A7C 6006           2186                     JZ   DONE_109
+0A7E 75906D         2187                     MOV  P1,#109
+0A81 020AC3         2188                     LJMP FAILED
+0A84                2189             DONE_109:
+                    2190     
+                    2191     
+                    2192     
+                    2193     
+                    2194             
+0A84 7880           2195                     MOV  R0,#128
+0A86                2196             RAM_CLR_110:
+0A86 18             2197                     DEC  R0
+0A87 7600           2198                     MOV  @R0,#0
+0A89 E8             2199                     MOV  A,R0
+0A8A 70FA           2200                     JNZ  RAM_CLR_110
+0A8C 75D000         2201                     MOV  PSW,#0
+                    2202     
+                    2203     
+0A8F 7435           2204                     MOV  A,#35H
+0A91 757F53         2205                     MOV  127,#53H
+0A94 627F           2206                     XRL  127,A
+0A96 E4             2207                     CLR  A
+0A97 E57F           2208                     MOV  A,127
+0A99 9466           2209                     SUBB A,#66H
+0A9B 6006           2210                     JZ   DONE_110
+0A9D 75906E         2211                     MOV  P1,#110
+0AA0 020AC3         2212                     LJMP FAILED
+0AA3                2213             DONE_110:
+                    2214     
+                    2215     
+                    2216     
+                    2217     
+                    2218             
+0AA3 7880           2219                     MOV  R0,#128
+0AA5                2220             RAM_CLR_111:
+0AA5 18             2221                     DEC  R0
+0AA6 7600           2222                     MOV  @R0,#0
+0AA8 E8             2223                     MOV  A,R0
+0AA9 70FA           2224                     JNZ  RAM_CLR_111
+0AAB 75D000         2225                     MOV  PSW,#0
+                    2226     
+                    2227     
+0AAE 757F35         2228                     MOV  127,#35H
+0AB1 637F53         2229                     XRL  127,#53H
+0AB4 E57F           2230                     MOV  A,127
+0AB6 9466           2231                     SUBB A,#66H
+0AB8 6006           2232                     JZ   DONE_111
+0ABA 75906F         2233                     MOV  P1,#111
+0ABD 020AC3         2234                     LJMP FAILED
+0AC0                2235             DONE_111:
+                    2236     
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    35
+
+                    2237     
+                    2238     
+                    2239     
+0AC0 75907F         2240                     MOV  P1,#127            ; All instructions passed
+                    2241     
+                    2242     
+0AC3                2243             FAILED:
+                    2244     
+                    2245     
+                    2246                     
+                    2247     
+                    2248     
+0AC3 020AC3         2249                     LJMP FAILED     
+                    2250     
+                    2251                     END
+                             
+                             
+                             
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    36
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ACC. . . . . . . .  D ADDR   00E0H   A   
+CHECK_BIT_43 . . .  C ADDR   0468H   A   
+CHECK_C_19 . . . .  C ADDR   01E2H   A   
+CHECK_C_20 . . . .  C ADDR   0205H   A   
+CHECK_C_21 . . . .  C ADDR   0228H   A   
+CHECK_C_22 . . . .  C ADDR   024FH   A   
+DB_TBL . . . . . .  C ADDR   0718H   A   
+DONE_10. . . . . .  C ADDR   00EFH   A   
+DONE_100 . . . . .  C ADDR   0979H   A   
+DONE_101 . . . . .  C ADDR   0991H   A   
+DONE_102 . . . . .  C ADDR   09B0H   A   
+DONE_103 . . . . .  C ADDR   09D2H   A   
+DONE_104 . . . . .  C ADDR   09F5H   A   
+DONE_105 . . . . .  C ADDR   0A18H   A   
+DONE_106 . . . . .  C ADDR   0A32H   A   
+DONE_107 . . . . .  C ADDR   0A4EH   A   
+DONE_108 . . . . .  C ADDR   0A6BH   A   
+DONE_109 . . . . .  C ADDR   0A84H   A   
+DONE_11. . . . . .  C ADDR   0109H   A   
+DONE_110 . . . . .  C ADDR   0AA3H   A   
+DONE_111 . . . . .  C ADDR   0AC0H   A   
+DONE_12. . . . . .  C ADDR   0123H   A   
+DONE_13. . . . . .  C ADDR   013EH   A   
+DONE_14. . . . . .  C ADDR   0157H   A   
+DONE_15. . . . . .  C ADDR   0173H   A   
+DONE_16. . . . . .  C ADDR   0190H   A   
+DONE_17. . . . . .  C ADDR   01AAH   A   
+DONE_18. . . . . .  C ADDR   01C4H   A   
+DONE_19. . . . . .  C ADDR   01EAH   A   
+DONE_2 . . . . . .  C ADDR   001AH   A   
+DONE_20. . . . . .  C ADDR   020DH   A   
+DONE_21. . . . . .  C ADDR   0230H   A   
+DONE_22. . . . . .  C ADDR   0257H   A   
+DONE_23. . . . . .  C ADDR   026DH   A   
+DONE_24. . . . . .  C ADDR   0282H   A   
+DONE_25. . . . . .  C ADDR   0299H   A   
+DONE_26. . . . . .  C ADDR   02AFH   A   
+DONE_27. . . . . .  C ADDR   02C3H   A   
+DONE_28. . . . . .  C ADDR   02DAH   A   
+DONE_29. . . . . .  C ADDR   02F4H   A   
+DONE_3 . . . . . .  C ADDR   0036H   A   
+DONE_30. . . . . .  C ADDR   030CH   A   
+DONE_31. . . . . .  C ADDR   0325H   A   
+DONE_32. . . . . .  C ADDR   0341H   A   
+DONE_33. . . . . .  C ADDR   035DH   A   
+DONE_35. . . . . .  C ADDR   0389H   A   
+DONE_36. . . . . .  C ADDR   03AEH   A   
+DONE_37. . . . . .  C ADDR   03C6H   A   
+DONE_38. . . . . .  C ADDR   03DFH   A   
+DONE_39. . . . . .  C ADDR   03FBH   A   
+DONE_4 . . . . . .  C ADDR   0053H   A   
+DONE_40. . . . . .  C ADDR   0417H   A   
+DONE_41. . . . . .  C ADDR   043CH   A   
+DONE_42. . . . . .  C ADDR   0452H   A   
+DONE_43. . . . . .  C ADDR   0470H   A   
+DONE_44. . . . . .  C ADDR   0486H   A   
+DONE_46. . . . . .  C ADDR   04BEH   A   
+DONE_47. . . . . .  C ADDR   04D5H   A   
+DONE_48. . . . . .  C ADDR   04ECH   A   
+DONE_49. . . . . .  C ADDR   0505H   A   
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    37
+
+DONE_5 . . . . . .  C ADDR   006CH   A   
+DONE_51. . . . . .  C ADDR   0519H   A   
+DONE_52. . . . . .  C ADDR   0531H   A   
+DONE_53. . . . . .  C ADDR   054BH   A   
+DONE_54. . . . . .  C ADDR   0566H   A   
+DONE_55. . . . . .  C ADDR   057DH   A   
+DONE_56. . . . . .  C ADDR   0597H   A   
+DONE_57. . . . . .  C ADDR   05B2H   A   
+DONE_58. . . . . .  C ADDR   05CAH   A   
+DONE_59. . . . . .  C ADDR   05E6H   A   
+DONE_6 . . . . . .  C ADDR   0087H   A   
+DONE_60. . . . . .  C ADDR   0601H   A   
+DONE_61. . . . . .  C ADDR   061EH   A   
+DONE_62. . . . . .  C ADDR   063CH   A   
+DONE_63. . . . . .  C ADDR   0656H   A   
+DONE_64. . . . . .  C ADDR   0673H   A   
+DONE_65. . . . . .  C ADDR   0691H   A   
+DONE_66. . . . . .  C ADDR   06ACH   A   
+DONE_67. . . . . .  C ADDR   06C3H   A   
+DONE_68. . . . . .  C ADDR   06DCH   A   
+DONE_69. . . . . .  C ADDR   06FCH   A   
+DONE_7 . . . . . .  C ADDR   00A4H   A   
+DONE_70. . . . . .  C ADDR   0720H   A   
+DONE_71. . . . . .  C ADDR   0743H   A   
+DONE_78. . . . . .  C ADDR   0768H   A   
+DONE_79. . . . . .  C ADDR   0784H   A   
+DONE_8 . . . . . .  C ADDR   00C2H   A   
+DONE_80. . . . . .  C ADDR   07A1H   A   
+DONE_81. . . . . .  C ADDR   07BAH   A   
+DONE_82. . . . . .  C ADDR   07D9H   A   
+DONE_83. . . . . .  C ADDR   07F6H   A   
+DONE_84. . . . . .  C ADDR   0815H   A   
+DONE_85. . . . . .  C ADDR   0834H   A   
+DONE_86. . . . . .  C ADDR   0873H   A   
+DONE_87. . . . . .  C ADDR   0863H   A   
+DONE_9 . . . . . .  C ADDR   00DCH   A   
+DONE_90. . . . . .  C ADDR   088BH   A   
+DONE_91. . . . . .  C ADDR   08A3H   A   
+DONE_92. . . . . .  C ADDR   08BBH   A   
+DONE_93. . . . . .  C ADDR   08D3H   A   
+DONE_94. . . . . .  C ADDR   08EBH   A   
+DONE_95. . . . . .  C ADDR   0902H   A   
+DONE_96. . . . . .  C ADDR   0915H   A   
+DONE_97. . . . . .  C ADDR   092DH   A   
+DONE_98. . . . . .  C ADDR   0947H   A   
+DONE_99. . . . . .  C ADDR   0962H   A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPH_OK_41. . . . .  C ADDR   0432H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+ERROR_102. . . . .  C ADDR   09AAH   A   
+ERROR_103. . . . .  C ADDR   09CCH   A   
+ERROR_104. . . . .  C ADDR   09EFH   A   
+ERROR_105. . . . .  C ADDR   0A12H   A   
+ERROR_19 . . . . .  C ADDR   01DCH   A   
+ERROR_20 . . . . .  C ADDR   01FFH   A   
+ERROR_21 . . . . .  C ADDR   0222H   A   
+ERROR_22 . . . . .  C ADDR   0249H   A   
+ERROR_44 . . . . .  C ADDR   0480H   A   
+ERROR_46 . . . . .  C ADDR   04B8H   A   
+ERROR_47 . . . . .  C ADDR   04CFH   A   
+ERROR_48 . . . . .  C ADDR   04E6H   A   
+ERROR_49 . . . . .  C ADDR   04FFH   A   
+ERROR_69 . . . . .  C ADDR   06F6H   A   
+ERROR_70 . . . . .  C ADDR   071AH   A   
+ERROR_71 . . . . .  C ADDR   073DH   A   
+ERROR_84 . . . . .  C ADDR   080FH   A   
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    38
+
+ERROR_85 . . . . .  C ADDR   082EH   A   
+ERROR_87 . . . . .  C ADDR   085DH   A   
+FAILED . . . . . .  C ADDR   0AC3H   A   
+JMP_TBL. . . . . .  C ADDR   0497H   A   
+JUMP_0 . . . . . .  C ADDR   049FH   A   
+JUMP_2 . . . . . .  C ADDR   049FH   A   
+JUMP_35. . . . . .  C ADDR   037DH   A   
+JUMP_36. . . . . .  C ADDR   03A0H   A   
+JUMP_4 . . . . . .  C ADDR   04A5H   A   
+JUMP_6 . . . . . .  C ADDR   049FH   A   
+NOT_JUMP_35. . . .  C ADDR   0383H   A   
+NOT_JUMP_36. . . .  C ADDR   03A8H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+PSW. . . . . . . .  D ADDR   00D0H   A   
+RAM_CLR_10 . . . .  C ADDR   00DEH   A   
+RAM_CLR_100. . . .  C ADDR   0964H   A   
+RAM_CLR_101. . . .  C ADDR   097BH   A   
+RAM_CLR_102. . . .  C ADDR   0993H   A   
+RAM_CLR_103. . . .  C ADDR   09B2H   A   
+RAM_CLR_104. . . .  C ADDR   09D4H   A   
+RAM_CLR_105. . . .  C ADDR   09F7H   A   
+RAM_CLR_106. . . .  C ADDR   0A1AH   A   
+RAM_CLR_107. . . .  C ADDR   0A34H   A   
+RAM_CLR_108. . . .  C ADDR   0A50H   A   
+RAM_CLR_109. . . .  C ADDR   0A6DH   A   
+RAM_CLR_11 . . . .  C ADDR   00F1H   A   
+RAM_CLR_110. . . .  C ADDR   0A86H   A   
+RAM_CLR_111. . . .  C ADDR   0AA5H   A   
+RAM_CLR_12 . . . .  C ADDR   010BH   A   
+RAM_CLR_13 . . . .  C ADDR   0125H   A   
+RAM_CLR_14 . . . .  C ADDR   0140H   A   
+RAM_CLR_15 . . . .  C ADDR   0159H   A   
+RAM_CLR_16 . . . .  C ADDR   0175H   A   
+RAM_CLR_17 . . . .  C ADDR   0192H   A   
+RAM_CLR_18 . . . .  C ADDR   01ACH   A   
+RAM_CLR_19 . . . .  C ADDR   01C6H   A   
+RAM_CLR_2. . . . .  C ADDR   0002H   A   
+RAM_CLR_20 . . . .  C ADDR   01ECH   A   
+RAM_CLR_21 . . . .  C ADDR   020FH   A   
+RAM_CLR_22 . . . .  C ADDR   0232H   A   
+RAM_CLR_23 . . . .  C ADDR   0259H   A   
+RAM_CLR_24 . . . .  C ADDR   026FH   A   
+RAM_CLR_25 . . . .  C ADDR   0284H   A   
+RAM_CLR_26 . . . .  C ADDR   029BH   A   
+RAM_CLR_27 . . . .  C ADDR   02B1H   A   
+RAM_CLR_28 . . . .  C ADDR   02C5H   A   
+RAM_CLR_29 . . . .  C ADDR   02DCH   A   
+RAM_CLR_3. . . . .  C ADDR   001CH   A   
+RAM_CLR_30 . . . .  C ADDR   02F6H   A   
+RAM_CLR_31 . . . .  C ADDR   030EH   A   
+RAM_CLR_32 . . . .  C ADDR   0327H   A   
+RAM_CLR_33 . . . .  C ADDR   0343H   A   
+RAM_CLR_34 . . . .  C ADDR   035FH   A   
+RAM_CLR_35 . . . .  C ADDR   036AH   A   
+RAM_CLR_36 . . . .  C ADDR   038BH   A   
+RAM_CLR_37 . . . .  C ADDR   03B0H   A   
+RAM_CLR_38 . . . .  C ADDR   03C8H   A   
+RAM_CLR_39 . . . .  C ADDR   03E1H   A   
+RAM_CLR_4. . . . .  C ADDR   0038H   A   
+RAM_CLR_40 . . . .  C ADDR   03FDH   A   
+RAM_CLR_41 . . . .  C ADDR   0419H   A   
+RAM_CLR_42 . . . .  C ADDR   043EH   A   
+RAM_CLR_43 . . . .  C ADDR   0454H   A   
+RAM_CLR_44 . . . .  C ADDR   0472H   A   
+RAM_CLR_45 . . . .  C ADDR   0488H   A   
+RAM_CLR_46 . . . .  C ADDR   04A7H   A   
+A51 MACRO ASSEMBLER  TESTALL                                                              02/20/2006 22:25:43 PAGE    39
+
+RAM_CLR_47 . . . .  C ADDR   04C0H   A   
+RAM_CLR_48 . . . .  C ADDR   04D7H   A   
+RAM_CLR_49 . . . .  C ADDR   04EEH   A   
+RAM_CLR_5. . . . .  C ADDR   0055H   A   
+RAM_CLR_51 . . . .  C ADDR   0507H   A   
+RAM_CLR_52 . . . .  C ADDR   051BH   A   
+RAM_CLR_53 . . . .  C ADDR   0533H   A   
+RAM_CLR_54 . . . .  C ADDR   054DH   A   
+RAM_CLR_55 . . . .  C ADDR   0568H   A   
+RAM_CLR_56 . . . .  C ADDR   057FH   A   
+RAM_CLR_57 . . . .  C ADDR   0599H   A   
+RAM_CLR_58 . . . .  C ADDR   05B4H   A   
+RAM_CLR_59 . . . .  C ADDR   05CCH   A   
+RAM_CLR_6. . . . .  C ADDR   006EH   A   
+RAM_CLR_60 . . . .  C ADDR   05E8H   A   
+RAM_CLR_61 . . . .  C ADDR   0603H   A   
+RAM_CLR_62 . . . .  C ADDR   0620H   A   
+RAM_CLR_63 . . . .  C ADDR   063EH   A   
+RAM_CLR_64 . . . .  C ADDR   0658H   A   
+RAM_CLR_65 . . . .  C ADDR   0675H   A   
+RAM_CLR_66 . . . .  C ADDR   0693H   A   
+RAM_CLR_67 . . . .  C ADDR   06AEH   A   
+RAM_CLR_68 . . . .  C ADDR   06C5H   A   
+RAM_CLR_69 . . . .  C ADDR   06DEH   A   
+RAM_CLR_7. . . . .  C ADDR   0089H   A   
+RAM_CLR_70 . . . .  C ADDR   06FEH   A   
+RAM_CLR_71 . . . .  C ADDR   0722H   A   
+RAM_CLR_76 . . . .  C ADDR   0745H   A   
+RAM_CLR_78 . . . .  C ADDR   0750H   A   
+RAM_CLR_79 . . . .  C ADDR   076AH   A   
+RAM_CLR_8. . . . .  C ADDR   00A6H   A   
+RAM_CLR_80 . . . .  C ADDR   0786H   A   
+RAM_CLR_81 . . . .  C ADDR   07A3H   A   
+RAM_CLR_82 . . . .  C ADDR   07BCH   A   
+RAM_CLR_83 . . . .  C ADDR   07DBH   A   
+RAM_CLR_84 . . . .  C ADDR   07F8H   A   
+RAM_CLR_85 . . . .  C ADDR   0817H   A   
+RAM_CLR_87 . . . .  C ADDR   0836H   A   
+RAM_CLR_9. . . . .  C ADDR   00C4H   A   
+RAM_CLR_90 . . . .  C ADDR   0875H   A   
+RAM_CLR_91 . . . .  C ADDR   088DH   A   
+RAM_CLR_92 . . . .  C ADDR   08A5H   A   
+RAM_CLR_93 . . . .  C ADDR   08BDH   A   
+RAM_CLR_94 . . . .  C ADDR   08D5H   A   
+RAM_CLR_95 . . . .  C ADDR   08EDH   A   
+RAM_CLR_96 . . . .  C ADDR   0904H   A   
+RAM_CLR_97 . . . .  C ADDR   0917H   A   
+RAM_CLR_98 . . . .  C ADDR   092FH   A   
+RAM_CLR_99 . . . .  C ADDR   0949H   A   
+SP . . . . . . . .  D ADDR   0081H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

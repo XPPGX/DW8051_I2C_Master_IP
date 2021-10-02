@@ -1,0 +1,211 @@
+C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer_ctr.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer_ctr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_timer_ctr
+
+Top level modules:
+	DW8051_timer_ctr
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_timer
+
+Top level modules:
+	DW8051_timer
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_control.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_control
+
+Top level modules:
+	DW8051_control
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/M24AA256.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/M24AA256.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module M24AA256
+
+Top level modules:
+	M24AA256
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_alu.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_alu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_alu
+
+Top level modules:
+	DW8051_alu
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer2.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_timer2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_timer2
+
+Top level modules:
+	DW8051_timer2
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/rom_mem.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/rom_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module rom_mem
+
+Top level modules:
+	rom_mem
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_op_decoder.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_op_decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_op_decoder
+
+Top level modules:
+	DW8051_op_decoder
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW01_add.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW01_add.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW01_add
+
+Top level modules:
+	DW01_add
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_0.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_0.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_intr_0
+
+Top level modules:
+	DW8051_intr_0
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_main_regs.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_main_regs.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_main_regs
+
+Top level modules:
+	DW8051_main_regs
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_1.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_intr_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_intr_1
+
+Top level modules:
+	DW8051_intr_1
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW01_cmp2.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW01_cmp2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW01_cmp2
+
+Top level modules:
+	DW01_cmp2
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_updn_ctr.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_updn_ctr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_updn_ctr
+
+Top level modules:
+	DW8051_updn_ctr
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_serial.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_serial.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_serial
+
+Top level modules:
+	DW8051_serial
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_biu.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_biu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_biu
+
+Top level modules:
+	DW8051_biu
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_cpu.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_cpu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_cpu
+
+Top level modules:
+	DW8051_cpu
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/sfr_mem.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/sfr_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sfr_mem
+
+Top level modules:
+	sfr_mem
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/int_mem.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/int_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module int_mem
+
+Top level modules:
+	int_mem
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/faker.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/faker.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module faker
+
+Top level modules:
+	faker
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_core.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_core.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_core
+
+Top level modules:
+	DW8051_core
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/hw3.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/hw3.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module hw3
+
+Top level modules:
+	hw3
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_shftreg.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_shftreg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_shftreg
+
+Top level modules:
+	DW8051_shftreg
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/tb_8051.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/tb_8051.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_8051
+
+Top level modules:
+	tb_8051
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/edge_detect.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/edge_detect.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module edge_detect
+
+Top level modules:
+	edge_detect
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_u_ctr_clr.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW8051_u_ctr_clr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW8051_u_ctr_clr
+
+Top level modules:
+	DW8051_u_ctr_clr
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW01_sub.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW01_sub.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW01_sub
+
+Top level modules:
+	DW01_sub
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW01_addsub.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW01_addsub.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW01_addsub
+
+Top level modules:
+	DW01_addsub
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/DW02_mult.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/DW02_mult.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DW02_mult
+
+Top level modules:
+	DW02_mult
+
+} {} {}} C:/Users/qwerl/Desktop/B10702007_HW3/ext_mem.v {1 {vlog -work work -stats=none C:/Users/qwerl/Desktop/B10702007_HW3/ext_mem.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ext_mem
+
+Top level modules:
+	ext_mem
+
+} {} {}}

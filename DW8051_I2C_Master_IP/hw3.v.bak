@@ -1,0 +1,55 @@
+`timescale 1ns/10ps
+module hw3(
+	input clk,
+	input rst_in_n,
+	input sfr_wr,
+	input sfr_rd,
+	input [7:0]sfr_data_out,
+	input [7:0]sfr_addr,
+	output [7:0]sfr_data_in,
+	
+	inout i2c_sda,
+	output i2c_scl
+	);
+reg [9:0]freq = 9'd0;
+reg sda_inorout = 1'd1; // 1'd1 for sda(out) , 1'd0 for sda(in).
+reg sda = 1'b1;
+reg scl = 1'b1;
+wire p_sda;
+wire n_sda;
+reg actstate = 1'b0; //actstate = 1'b0 for stop condtion , actstate = 1'b1 for start condition.
+reg addrflag = 1'b0; //addflag = 1'b0 for sda isn't transimitting addr, otherwise 1'b1. 
+reg dataflag = 1'b0; //dataflag = 1'b0 for sda isn't transimtting data, otherwise 1'b1.
+reg M_start_stop = 1'b0; // The mission is start or stop, 1'b1 for start , 1'b0 for stop.
+
+assign i2c_sda = sda_inorout? sda:1'dz;
+assign i2c_scl = scl;
+
+edge_detect write1(.clk(clk),.rst_n(reset_n),.data_in(sda),.pos_edge(p_sda),.neg_edge(n_sda)); 
+
+always@(posedge clk or negedge rst_in_n)
+begin
+	if(!rst_in_n)
+	begin
+		scl = 1'b1;
+		M_start_stop = 1'b0;
+		freq <= 9'd0;
+	end
+	else
+	begin
+		if(M_start_stop == 1'b1)
+		begin
+			if(freq == 9'd100)
+			begin
+				freq <= 1'd0;
+				scl <= ~scl;
+			end
+			else
+			begin
+				freq <= freq + 1'd1;
+			end
+		end
+	end
+end
+
+endmodule 
